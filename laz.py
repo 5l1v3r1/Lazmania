@@ -95,6 +95,32 @@ def bannerlk_dl():
     print ("╚══════════════════════════════════════╝")
     print (W+"")
 
+def about():
+    print ("")
+    print (R+"       __   __ ")
+    print (R+"      /  \./  \/\_ ")
+    print (R+"   __{^\_ _}_   )  }"+G+"/^\  "+O+"  Lazy.Frmwrk "+C+"Project      ")
+    print (R+"  /  /\_/^\._}_/  /"+G+"/  / ")
+    print (R+" (  (__{(@)}\__}./"+G+"/_/__A____A_____A________A_____A___")
+    print (R+"  \__/{/(_)\_}  )\\"+G+"\\ \\\---v-----V-----V-v----Y----v----")
+    print (R+"   (   (__)_)_/  )\ "+G+"\> ")
+    print (R+"    \__/     \__/\/"+G+"\/  "+W+"    About Me and My Tool")
+    print (R+"       \__,--' ")
+    print ("")
+    print (C+" Name       "+R+":"+W+" Rakka Pratama Putra")
+    print (C+" Birth      "+R+":"+W+" 16 August 2003")
+    print (C+" Country    "+R+":"+W+" ID")
+    print (C+" Fav. Color "+R+":"+W+" White")
+    print ("")
+    print (C+" ═══════════════════════"+W+" About"+C+" ═══════════════════════"+W)
+    print ("")
+    print (" I made this framework initially just for fun")
+    print (" but finally I developed this framework by adding")
+    print (" some tools for lazy society out there.")
+    print (" Maybe now I can only add a few tools in this framework,")
+    print (" and I will continue to update them")
+    print ("")
+
 ##################################################  Banner  ##################################################
 ##################################################  Proses  ##################################################
 
@@ -728,6 +754,7 @@ def menu():
     print (C+' 01'+R+' :'+W+' Math Tool')
     print (C+' 02'+R+' :'+W+' Brainly Seeker')
     print (C+' 03'+R+' :'+W+' LK21 Bypass Shortlink')
+    print (C+' 04'+R+' :'+W+' About')
     print (C+' 00'+R+' :'+W+' Exit')
     print ('')
     pilmenu = int(input(C+' Menu '+R+'> '+W))
@@ -738,6 +765,8 @@ def menu():
         brainly()
     elif pilmenu == 3 :
         lk21()
+    elif pilmenu == 4 :
+        about()
     elif pilmenu == 0 :
         exit()
     else :
