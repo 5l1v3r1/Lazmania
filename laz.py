@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Python 3
 # Gausah pake acara Recode Recode segala ya Kontol
-import math , requests , os , time , datetime , re , json
+import math , requests , os , time , datetime , re , json , string , random
 from bs4 import BeautifulSoup
 
 
@@ -94,6 +94,22 @@ def bannerlk_dl():
     print ("                                    ██"+C+" ║"+W+"   https://github.com/N1ght420"+R)
     print ("██████████████████████████████████████"+C+" ║")
     print ("╚══════════════════════════════════════╝")
+    print (W+"")
+
+def bannergen():
+    os.system('clear')
+    print (R+"██████████████████████████████████████████████████"+C+"═╗")
+    print ("╚═══════════════════════════════════════════════"+R+"██"+C+" ║"+R)
+    print ("                                                ██"+C+" ║"+W)
+    print ("    ██╗  ██╗      ██████╗ ███████╗███╗   ██╗    "+R+"██"+C+" ║"+W)
+    print ("    ██║ ██╔╝     ██╔════╝ ██╔════╝████╗  ██║    "+R+"██"+C+" ║"+W)
+    print ("    █████╔╝█████╗██║  ███╗█████╗  ██╔██╗ ██║    "+R+"██"+C+" ║"+W)
+    print ("    ██╔═██╗╚════╝██║   ██║██╔══╝  ██║╚██╗██║    "+R+"██"+C+" ║"+W)
+    print ("    ██║  ██╗     ╚██████╔╝███████╗██║ ╚████║    "+R+"██"+C+" ║"+W)
+    print ("    ╚═╝  ╚═╝      ╚═════╝ ╚══════╝╚═╝  ╚═══╝    "+R+"██"+C+" ║"+R)
+    print ("                                                ██"+C+" ║"+R)
+    print ("██████████████████████████████████████████████████"+C+" ║")
+    print ("╚══════════════════════════════════════════════════╝")
     print (W+"")
 
 def about():
@@ -722,6 +738,43 @@ def lk21():
         print (C+" ["+W+" 404 "+C+"]"+R+" >"+W+" Film tidak ditemukan")
     print ("")
 
+def generate() :
+    bannergen()
+    pil = str(input(R+' Input Base '+W+'(Y/N)'+R+'? '+C+'> '+W))
+    if pil == 'n' or pil == 'N' :
+        size = int(input(R+' Jumlah digit Kode '+C+'> '+W))
+        case = str(input(R+' UPPER/lower '+W+'(U/l)'+R+'? '+W))
+        total = int(input(R+' Total Kode '+C+'> '+W))
+        if case == 'u' or case == 'U' :
+            def rand(chars=string.ascii_uppercase + string.digits):
+                return ''.join(random.choice(chars) for _ in range(size))
+            for i in range(total):
+                print (rand())
+        elif case == 'l' or case == 'L' :
+            def rand(chars=string.ascii_lowercase + string.digits):
+                return ''.join(random.choice(chars) for _ in range(size))
+            for i in range(total):
+                print (rand())
+    elif pil == 'y' or pil == 'Y' :
+        base = int(input(R+' Jumlah digit Base '+C+'> '+W))
+        base1 = str(input(R+' Input Base '+C+'> '+W))
+        variant = base1
+        size = int(input(R+' Jumlah digit Kode '+C+'> '+W))
+        case = str(input(R+' UPPER/lower '+W+'(U/l)'+R+'? '+W))
+        total = int(input(R+' Total Kode '+C+'> '+W))
+        if case == 'u' or case == 'U' :
+            def rand(chars=string.ascii_uppercase + string.digits):
+                return ''.join(random.choice(chars) for _ in range(size-base))
+            for i in range(total):
+                print (variant+rand())
+        elif case == 'l' or case == 'L' :
+            def rand(chars=string.ascii_lowercase + string.digits):
+                return ''.join(random.choice(chars) for _ in range(size-base))
+            for i in range(total):
+                print (variant+rand())
+    else :
+        exit()
+
 ##################################################  Proses  ##################################################
 ##################################################   Menu   ##################################################
 
@@ -756,7 +809,8 @@ def menu():
     print (C+' 01'+R+' :'+W+' Math Tool')
     print (C+' 02'+R+' :'+W+' Brainly Seeker')
     print (C+' 03'+R+' :'+W+' LK21 Bypass Shortlink')
-    print (C+' 04'+R+' :'+W+' About')
+    print (C+' 04'+R+' :'+W+' Custom Code Generator')
+    print (C+' 05'+R+' :'+W+' About')
     print (C+' 00'+R+' :'+W+' Exit')
     print ('')
     pilmenu = int(input(C+' Menu '+R+'> '+W))
@@ -768,6 +822,8 @@ def menu():
     elif pilmenu == 3 :
         lk21()
     elif pilmenu == 4 :
+        generate()
+    elif pilmenu == 5 :
         about()
     elif pilmenu == 0 :
         exit()
