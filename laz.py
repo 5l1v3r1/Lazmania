@@ -21,7 +21,7 @@ def banner():
     print (O+" / `.`. ,-'         `-/ /   ) "+W+"  ________| "+C+"hEllO, L4zy pe0ple!!"+W+" |")
     print (O+"(    `,'             _ \   ;  "+W+" /        |______________________|")
     print (O+" \  _( _           ,'  )/  : "+W+"_/                                 ")
-    print (O+"  \ `-( `-.      ,'    /  /                              "+G+" v.4.0 ")
+    print (O+"  \ `-( `-.      ,'    /  /                              "+G+" v.4.5 ")
     print (O+"   \   \ __`.___/_,-( /_,' "+R+"_    ____ ___  _  _ ____ _  _ _ ____ ")
     print (O+"    `--'`,\_o,(_)o_,',     "+R+"|    |__|   /  |\/| |__| |\ | | |__| ")
     print (O+"        (    /`-'\    )    "+R+"|___ |  |  /__ |  | |  | | \| | |  | ")
@@ -121,6 +121,10 @@ def help():
     mathtool()
     pilbangundatar()
     pilbangunruang()
+    phytool()
+    glurus()
+    glurusbc()
+    glurusbl()
     medus()
     persegi()
     persegipanjang()
@@ -135,6 +139,153 @@ def help():
     kubik()
     limas()
     main()
+
+def glurus():
+    print ('')
+    print (C+' ljrr'+R+'      :'+W+' Laju Rata Rata')
+    print (C+' kcrr'+R+'      :'+W+' Kecepatan Rata Rata')
+    print (C+' kcs'+R+'       :'+W+' Kecepatan Sesaat')
+    print (C+' plj'+R+'       :'+W+' Perlajuan')
+    print (C+' pcrr'+R+'      :'+W+' Percepatan Rata Rata')
+    print (C+' pcs'+R+'       :'+W+' Percepatan Sesaat')
+    print (C+' glb'+R+'       :'+W+' Gerak Lurus Beraturan')
+    print (C+' glbb'+R+'      :'+W+' Gerak Lurus Berubah Beraturan')
+    print (C+' glbc'+R+'      :'+W+' Gerak Lurus Berubah Dipercepat')
+    print (C+' glbl'+R+'      :'+W+' Gerak Lurus Berubah Diperlambat')
+    print (C+' gvb'+R+'       :'+W+' Gerak Vertikal Ke Bawah')
+    print (C+' gva'+R+'       :'+W+' Gerak Vertikal Ke Atas')
+    print ('')
+
+def lajurata():
+    s = float(input(C+' Jarak'+R+' > '+W))
+    t = float(input(C+' Waktu'+R+' > '+W))
+    v = s/t
+    print ('')
+    print (C+' Laju Rata Rata'+R+' > '+W, v ,C+'m/s'+W)
+
+def kcepatrata():
+    x = float(input(C+' Perpindahan'+R+' > '+W))
+    t = float(input(C+' Waktu'+R+' > '+W))
+    v = x/t
+    print ('')
+    print (C+' Kecepatan Rata Rata'+R+' > '+W, v ,W)
+
+def kcepats():
+    x = float(input(C+' Perpindahan'+R+' > '+W))
+    t = float(input(C+' Waktu'+R+' > '+W))
+    v = x/t
+    print ('')
+    print (C+' Laju Rata Rata'+R+' > '+W, v ,W)
+
+def plajuan():
+    v = float(input(C+' Kecepatan'+R+' > '+W))
+    t = float(input(C+' Waktu'+R+' > '+W))
+    a = v/t
+    print ('')
+    print (C+' Perlajuan'+R+' > '+W, a ,C+'m/s2'+W)
+
+def pcepatrata():
+    v = float(input(C+' Kecepatan'+R+' > '+W))
+    t = float(input(C+' Waktu'+R+' > '+W))
+    a = v/t
+    print ('')
+    print (C+' Percepatan Rata Rata'+R+' > '+W, a ,W)
+
+def pcepats():
+    v = float(input(C+' Kecepatan'+R+' > '+W))
+    t = float(input(C+' Waktu'+R+' > '+W))
+    a = v/t
+    print ('')
+    print (C+' Laju Rata Rata'+R+' > '+W, a ,C+'m/s'+W)
+
+def glurusb():
+    s = float(input(C+' Jarak'+R+' >'+W))
+    t = float(input(C+' Waktu'+R+' >'+W))
+    v = s/t
+    print ('')
+    print (C+' Gerak Lurus Beraturan'+R+' > '+W, v ,W)
+
+def glurusbb():
+    v = float(input(C+' Jarak'+R+' >'+W))
+    t = float(input(C+' Waktu'+R+' >'+W))
+    a = v/t
+    print ('')
+    print (C+' Gerak Lurus Berubah Beraturan'+R+' > '+W, v ,W)
+
+def glurusbcvt():
+    v0 = float(input(C+' Kecepatan Awal'+R+' > '+W))
+    t = float(input(C+' Waktu'+R+' > '+W))
+    a = float(input(C+' Percepatan'+R+' > '+W))
+    vt = v0+a*t
+    s = v0*t+(a*t)*(a*t)*1/2
+    print ('')
+    print (C+' Kecepatan Akhir'+R+' > '+W, vt ,C+'m/s'+W)
+    print (C+' Jarak Yang Ditempuh'+R+' > '+W, s ,C+'m'+W)
+
+def glurusbca():
+    v0 = float(input(C+' Kecepatan Awal'+R+' > '+W))
+    t = float(input(C+' Waktu'+R+' > '+W))
+    vt = float(input(C+' Kecepatan Akhir'+R+' > '+W))
+    a = (vt-v0)/t
+    s = v0*t+(a*t)*(a*t)*1/2
+    print ('')
+    print (C+' Percepatan'+R+' > '+W, a ,C+'m/s2'+W)
+    print (C+' Jarak Yang Ditempuh'+R+' > '+W, s ,C+'m'+W)
+
+def gverta():
+    g = 10
+    v0 = float(input(C+' Kecepatan Awal'+R+' > '+W))
+    tm = float(input(C+' Waktu Di Titik Tertinggi'+R+' > '+W))
+    h = v0**2/(2*g)
+    t = 2*tm
+    vt = v0-g*t
+    vt2 = v0**2-2*g*h
+    print (C+' Tinggi Maksimum'+R+' > '+W, h ,C+'m/s'+W)
+    print (C+' Waktu Ketika Benda Di Tanah'+R+' > '+W, t ,C+'m/s'+W)
+    print (C+' Kecepatan'+R+' > '+W, vt ,C+'m/s'+W)
+    print (C+' Kecepatan (vt2)'+R+' > '+W, vt2 ,C+'m/s2'+W)
+
+def gvertb():
+    g = 10
+    h = float(input(C+' Ketinggian'+R+' > '+W))
+    v0 = float(input(C+' Kecepatan Awal'+R+' > '+W))
+    t = float(input(C+' Waktu'+R+' > '+W))
+    vt = v0+g*t
+    vt2 = v0**2+2*g*h
+    print (C+' Kecepatan'+R+' > '+W, vt ,C+'m/s'+W)
+    print (C+' Kecepatan (vt2)'+R+' > '+W, vt2 ,C+'m/s2'+W)
+
+def glurusbc():
+    print ('')
+    print (C+' glbcka'+R+'    :'+W+' Kecepatan Akhir')
+    print (C+' glbcpc'+R+'    :'+W+' Percepatan')
+    print ('')
+
+def glurusbl():
+    print ('')
+    print (C+' glblka'+R+'    :'+W+' Kecepatan Akhir')
+    print (C+' glblpc'+R+'    :'+W+' Percepatan')
+    print ('')
+
+def glurusblvt():
+    v0 = float(input(C+' Kecepatan Awal'+R+' > '+W))
+    t = float(input(C+' Waktu'+R+' > '+W))
+    a = float(input(C+' Percepatan'+R+' > '+W))
+    vt = v0-a*t
+    s = v0*t-1/2*(a*t)**2
+    print ('')
+    print (C+' Kecepatan Akhir'+R+' > '+W, vt ,C+'m/s'+W)
+    print (C+' Jarak Yang Ditempuh'+R+' > '+W, s ,C+'m'+W)
+
+def glurusbla():
+    v0 = float(input(C+' Kecepatan Awal'+R+' > '+W))
+    t = float(input(C+' Waktu'+R+' > '+W))
+    vt = float(input(C+' Kecepatan Akhir'+R+' > '+W))
+    a = (vt-v0)/t
+    s = v0*t-1/2*(a*t)**2
+    print ('')
+    print (C+' Percepatan'+R+' > '+W, a ,C+'m/s2'+W)
+    print (C+' Jarak Yang Ditempuh'+R+' > '+W, s ,C+'m'+W)
 
 def prima():
     num = int(input(C+' Masukkan Bilangan'+R+' > '+W))
@@ -357,9 +508,9 @@ def luas_layang () :
 	
 def medus() :      
     print ('')
-    print (C+' mean'+R+'      :'+W+' Menentukan Mean')
-    print (C+' med'+R+'       :'+W+' Menentukan Median')
-    print (C+' mod'+R+'       :'+W+' Menentukan Modus')
+    print (C+' mean'+R+'      :'+W+' Mean')
+    print (C+' med'+R+'       :'+W+' Median')
+    print (C+' mod'+R+'       :'+W+' Modus')
     print ('')
 
 def persegi():
@@ -559,16 +710,23 @@ def generate() :
                 print (variant+rand())
 
 def mathtool() :
-    print (C+' bd'+R+'        :'+W+' Operasi Bangun Datar')
-    print (C+' br'+R+'        :'+W+' Operasi Bangun Ruang')
-    print (C+' bp'+R+'        :'+W+' Menentukan Bilangan Prima')
-    print (C+' fb'+R+'        :'+W+' Menentukan Faktor Bilangan')
-    print (C+' mm'+R+'        :'+W+' Menentukan Mean / Median / Modus')
+    print ('')
+    print (C+' bd'+R+'        :'+W+' Bangun Datar')
+    print (C+' br'+R+'        :'+W+' Bangun Ruang')
+    print (C+' bp'+R+'        :'+W+' Bilangan Prima')
+    print (C+' fb'+R+'        :'+W+' Faktor Bilangan')
+    print (C+' mm'+R+'        :'+W+' Mean / Median / Modus')
+    print ('')
+
+def phytool():
+    print ('')
+    print (C+' gl'+R+'        :'+W+' Gerak Lurus')
     print ('')
 
 def menu():
     print ('')
     print (C+' math'+R+'      :'+W+' Math Tool')
+    print (C+' phy'+R+'       :'+W+' Physics Tool')
     print (C+' 0brain'+R+'    :'+W+' Brainly Seeker')
     print (C+' lkx21'+R+'     :'+W+' LK21 Bypass Shortlink')
     print (C+' custgen'+R+'   :'+W+' Custom Code Generator')
@@ -589,8 +747,22 @@ def main():
     elif cmd == 'help' or cmd == '-h' :
         help()
         main()
+    elif cmd == 'clear' or cmd == '-c' :
+        banner()
+        main()
+    elif cmd == 'exit' or cmd == '-e' :
+        print (R+' Exitting Now'+W)
+        exit()
+    elif cmd == 'quit' or cmd == '-q' :
+        print ('')
+        print (O+" Command "+cmd+" Not Found")
+        print (W+" Type ( "+C+"exit"+W+" ) to Exit Program")
+        main()
     elif cmd == 'math' :
         mathtool()
+        main()
+    elif cmd == 'phy' :
+        phytool()
         main()
     elif cmd == '0brain' :
         brainly()
@@ -606,6 +778,12 @@ def main():
         main()
     elif cmd == 'br' :
         pilbangunruang()
+        main()
+    elif cmd == 'gl' :
+        glurus()
+        main()
+    elif cmd == 'gml' :
+        glingkar()
         main()
     elif cmd == 'bp' :
         prima()
@@ -726,6 +904,57 @@ def main():
         main()
     elif cmd == 'vl' :
         volume_limas()
+        main()
+    elif cmd == 'glblka' :
+        glurusblvt()
+        main()
+    elif cmd == 'glblpc' :
+        glurusbla()
+        main()
+    elif cmd == 'glbl' :
+        glurusbl()
+        main()
+    elif cmd == 'ljrr' :
+        lajurata()
+        main()
+    elif cmd == 'kcrr' :
+        kcepatrata()
+        main()
+    elif cmd == 'kcs' :
+        kcepats()
+        main()
+    elif cmd == 'plj' :
+        plajuan()
+        main()
+    elif cmd == 'pcrr' :
+        pcepatrata()
+        main()
+    elif cmd == 'pcs' :
+        pcepats()
+        main()
+    elif cmd == 'glb' :
+        glurusb()
+        main()
+    elif cmd == 'glbb' :
+        glurusbb()
+        main()
+    elif cmd == 'glbc' :
+        glurusbc()
+        main()
+    elif cmd == 'glbl' :
+        glurusbl()
+        main()
+    elif cmd == 'glbcka' :
+        glurusbcvt()
+        main()
+    elif cmd == 'glbcpc' :
+        glurusbca()
+        main()
+    elif cmd == 'gvb' :
+        gvertb()
+        main()
+    elif cmd == 'gva' :
+        gverta()
         main()
     else :
         print ('')
