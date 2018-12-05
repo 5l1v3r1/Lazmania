@@ -21,7 +21,7 @@ def banner():
     print (O+" / `.`. ,-'         `-/ /   ) "+W+"  ________| "+C+"hEllO, L4zy pe0ple!!"+W+" |")
     print (O+"(    `,'             _ \   ;  "+W+" /        |______________________|")
     print (O+" \  _( _           ,'  )/  : "+W+"_/                                 ")
-    print (O+"  \ `-( `-.      ,'    /  /                              "+G+" v.4.5 ")
+    print (O+"  \ `-( `-.      ,'    /  /                              "+G+" v.5.0 ")
     print (O+"   \   \ __`.___/_,-( /_,' "+R+"_    ____ ___  _  _ ____ _  _ _ ____ ")
     print (O+"    `--'`,\_o,(_)o_,',     "+R+"|    |__|   /  |\/| |__| |\ | | |__| ")
     print (O+"        (    /`-'\    )    "+R+"|___ |  |  /__ |  | |  | | \| | |  | ")
@@ -157,103 +157,103 @@ def glurus():
     print ('')
 
 def lajurata():
-    s = float(input(C+' Jarak'+R+' > '+W))
-    t = float(input(C+' Waktu'+R+' > '+W))
+    s = float(input(C+' Jarak '+R+'> '+W))
+    t = float(input(C+' Waktu '+R+'> '+W))
     v = s/t
     print ('')
-    print (C+' Laju Rata Rata'+R+' > '+W, v ,C+'m/s'+W)
+    print (C+' Laju Rata Rata '+R+'>'+W, v ,C+'m/s'+W)
 
 def kcepatrata():
-    x = float(input(C+' Perpindahan'+R+' > '+W))
-    t = float(input(C+' Waktu'+R+' > '+W))
+    x = float(input(C+' Perpindahan '+R+'> '+W))
+    t = float(input(C+' Waktu '+R+'> '+W))
     v = x/t
     print ('')
-    print (C+' Kecepatan Rata Rata'+R+' > '+W, v ,W)
+    print (C+' Kecepatan Rata Rata '+R+'>'+W, v ,W)
 
 def kcepats():
-    x = float(input(C+' Perpindahan'+R+' > '+W))
-    t = float(input(C+' Waktu'+R+' > '+W))
+    x = float(input(C+' Perpindahan '+R+'> '+W))
+    t = float(input(C+' Waktu '+R+'> '+W))
     v = x/t
     print ('')
-    print (C+' Laju Rata Rata'+R+' > '+W, v ,W)
+    print (C+' Laju Rata Rata '+R+'>'+W, v ,W)
 
 def plajuan():
-    v = float(input(C+' Kecepatan'+R+' > '+W))
-    t = float(input(C+' Waktu'+R+' > '+W))
+    v = float(input(C+' Kecepatan '+R+'> '+W))
+    t = float(input(C+' Waktu '+R+'> '+W))
     a = v/t
     print ('')
-    print (C+' Perlajuan'+R+' > '+W, a ,C+'m/s2'+W)
+    print (C+' Perlajuan '+R+'>'+W, a ,C+'m/s2'+W)
 
 def pcepatrata():
-    v = float(input(C+' Kecepatan'+R+' > '+W))
-    t = float(input(C+' Waktu'+R+' > '+W))
+    v = float(input(C+' Kecepatan '+R+'> '+W))
+    t = float(input(C+' Waktu '+R+'> '+W))
     a = v/t
     print ('')
-    print (C+' Percepatan Rata Rata'+R+' > '+W, a ,W)
+    print (C+' Percepatan Rata Rata '+R+'>'+W, a ,W)
 
 def pcepats():
-    v = float(input(C+' Kecepatan'+R+' > '+W))
-    t = float(input(C+' Waktu'+R+' > '+W))
+    v = float(input(C+' Kecepatan '+R+'> '+W))
+    t = float(input(C+' Waktu '+R+'> '+W))
     a = v/t
     print ('')
-    print (C+' Laju Rata Rata'+R+' > '+W, a ,C+'m/s'+W)
+    print (C+' Laju Rata Rata '+R+'>'+W, a ,C+'m/s'+W)
 
 def glurusb():
-    s = float(input(C+' Jarak'+R+' >'+W))
-    t = float(input(C+' Waktu'+R+' >'+W))
+    s = float(input(C+' Jarak '+R+'> '+W))
+    t = float(input(C+' Waktu '+R+'> '+W))
     v = s/t
     print ('')
-    print (C+' Gerak Lurus Beraturan'+R+' > '+W, v ,W)
+    print (C+' Gerak Lurus Beraturan '+R+'>'+W, v ,W)
 
 def glurusbb():
-    v = float(input(C+' Jarak'+R+' >'+W))
-    t = float(input(C+' Waktu'+R+' >'+W))
+    v = float(input(C+' Jarak '+R+'> '+W))
+    t = float(input(C+' Waktu '+R+'> '+W))
     a = v/t
     print ('')
-    print (C+' Gerak Lurus Berubah Beraturan'+R+' > '+W, v ,W)
+    print (C+' Gerak Lurus Berubah Beraturan '+R+'>'+W, v ,W)
 
 def glurusbcvt():
-    v0 = float(input(C+' Kecepatan Awal'+R+' > '+W))
-    t = float(input(C+' Waktu'+R+' > '+W))
-    a = float(input(C+' Percepatan'+R+' > '+W))
+    v0 = float(input(C+' Kecepatan Awal '+R+'> '+W))
+    t = float(input(C+' Waktu '+R+'> '+W))
+    a = float(input(C+' Percepatan '+R+'> '+W))
     vt = v0+a*t
     s = v0*t+(a*t)*(a*t)*1/2
     print ('')
-    print (C+' Kecepatan Akhir'+R+' > '+W, vt ,C+'m/s'+W)
-    print (C+' Jarak Yang Ditempuh'+R+' > '+W, s ,C+'m'+W)
+    print (C+' Kecepatan Akhir '+R+'>'+W, vt ,C+'m/s'+W)
+    print (C+' Jarak Yang Ditempuh '+R+'>'+W, s ,C+'m'+W)
 
 def glurusbca():
-    v0 = float(input(C+' Kecepatan Awal'+R+' > '+W))
-    t = float(input(C+' Waktu'+R+' > '+W))
-    vt = float(input(C+' Kecepatan Akhir'+R+' > '+W))
+    v0 = float(input(C+' Kecepatan Awal '+R+'> '+W))
+    t = float(input(C+' Waktu '+R+'> '+W))
+    vt = float(input(C+' Kecepatan Akhir '+R+'> '+W))
     a = (vt-v0)/t
     s = v0*t+(a*t)*(a*t)*1/2
     print ('')
-    print (C+' Percepatan'+R+' > '+W, a ,C+'m/s2'+W)
-    print (C+' Jarak Yang Ditempuh'+R+' > '+W, s ,C+'m'+W)
+    print (C+' Percepatan '+R+'>'+W, a ,C+'m/s2'+W)
+    print (C+' Jarak Yang Ditempuh '+R+'>'+W, s ,C+'m'+W)
 
 def gverta():
     g = 10
-    v0 = float(input(C+' Kecepatan Awal'+R+' > '+W))
-    tm = float(input(C+' Waktu Di Titik Tertinggi'+R+' > '+W))
+    v0 = float(input(C+' Kecepatan Awal '+R+'> '+W))
+    tm = float(input(C+' Waktu Di Titik Tertinggi '+R+'> '+W))
     h = v0**2/(2*g)
     t = 2*tm
     vt = v0-g*t
     vt2 = v0**2-2*g*h
-    print (C+' Tinggi Maksimum'+R+' > '+W, h ,C+'m/s'+W)
-    print (C+' Waktu Ketika Benda Di Tanah'+R+' > '+W, t ,C+'m/s'+W)
-    print (C+' Kecepatan'+R+' > '+W, vt ,C+'m/s'+W)
-    print (C+' Kecepatan (vt2)'+R+' > '+W, vt2 ,C+'m/s2'+W)
+    print (C+' Tinggi Maksimum '+R+'>'+W, h ,C+'m/s'+W)
+    print (C+' Waktu Ketika Benda Di Tanah '+R+'>'+W, t ,C+'m/s'+W)
+    print (C+' Kecepatan '+R+'>'+W, vt ,C+'m/s'+W)
+    print (C+' Kecepatan (vt2) '+R+'>'+W, vt2 ,C+'m/s2'+W)
 
 def gvertb():
     g = 10
-    h = float(input(C+' Ketinggian'+R+' > '+W))
-    v0 = float(input(C+' Kecepatan Awal'+R+' > '+W))
-    t = float(input(C+' Waktu'+R+' > '+W))
+    h = float(input(C+' Ketinggian '+R+'> '+W))
+    v0 = float(input(C+' Kecepatan Awal '+R+'> '+W))
+    t = float(input(C+' Waktu '+R+'> '+W))
     vt = v0+g*t
     vt2 = v0**2+2*g*h
-    print (C+' Kecepatan'+R+' > '+W, vt ,C+'m/s'+W)
-    print (C+' Kecepatan (vt2)'+R+' > '+W, vt2 ,C+'m/s2'+W)
+    print (C+' Kecepatan '+R+'>'+W, vt ,C+'m/s'+W)
+    print (C+' Kecepatan (vt2) '+R+'>'+W, vt2 ,C+'m/s2'+W)
 
 def glurusbc():
     print ('')
@@ -268,57 +268,57 @@ def glurusbl():
     print ('')
 
 def glurusblvt():
-    v0 = float(input(C+' Kecepatan Awal'+R+' > '+W))
-    t = float(input(C+' Waktu'+R+' > '+W))
-    a = float(input(C+' Percepatan'+R+' > '+W))
+    v0 = float(input(C+' Kecepatan Awal '+R+'> '+W))
+    t = float(input(C+' Waktu '+R+'> '+W))
+    a = float(input(C+' Percepatan '+R+'> '+W))
     vt = v0-a*t
     s = v0*t-1/2*(a*t)**2
     print ('')
-    print (C+' Kecepatan Akhir'+R+' > '+W, vt ,C+'m/s'+W)
-    print (C+' Jarak Yang Ditempuh'+R+' > '+W, s ,C+'m'+W)
+    print (C+' Kecepatan Akhir '+R+'>'+W, vt ,C+'m/s'+W)
+    print (C+' Jarak Yang Ditempuh '+R+'>'+W, s ,C+'m'+W)
 
 def glurusbla():
-    v0 = float(input(C+' Kecepatan Awal'+R+' > '+W))
-    t = float(input(C+' Waktu'+R+' > '+W))
-    vt = float(input(C+' Kecepatan Akhir'+R+' > '+W))
+    v0 = float(input(C+' Kecepatan Awal '+R+'> '+W))
+    t = float(input(C+' Waktu '+R+'> '+W))
+    vt = float(input(C+' Kecepatan Akhir '+R+'> '+W))
     a = (vt-v0)/t
     s = v0*t-1/2*(a*t)**2
     print ('')
-    print (C+' Percepatan'+R+' > '+W, a ,C+'m/s2'+W)
-    print (C+' Jarak Yang Ditempuh'+R+' > '+W, s ,C+'m'+W)
+    print (C+' Percepatan '+R+'>'+W, a ,C+'m/s2'+W)
+    print (C+' Jarak Yang Ditempuh '+R+'>'+W, s ,C+'m'+W)
 
 def prima():
-    num = int(input(C+' Masukkan Bilangan'+R+' > '+W))
+    num = int(input(C+' Masukkan Bilangan '+R+'> '+W))
     if num > 1:
         for i in range(2,num):
             if (num % i) == 0:
-                print (C+' Angka'+W, num ,R+' Bukan Bilangan Prima'+W)
-                print (C+' Karena '+W, i ,C+' Dikali '+W, num//i ,R+' = '+W, num)
+                print (C+' Angka'+W, num ,R+'Bukan Bilangan Prima'+W)
+                print (C+' Karena'+W, i ,C+'Dikali'+W, num//i ,R+'='+W, num)
                 break
         else:
-            print (C+' Angka'+W, num ,C+' Adalah Bilangan Prima'+W)
+            print (C+' Angka'+W, num ,C+'Adalah Bilangan Prima'+W)
 
     else:
-        print (C+' Angka'+W, num ,R+' Bukan Bilangan Prima'+W)
+        print (C+' Angka'+W, num ,R+'Bukan Bilangan Prima'+W)
 
 def fakt(x):
     print ("")
-    print (C+' Faktor Dari'+W+ x +C+' Adalah'+W)
+    print (C+' Faktor Dari'+W+ x +C+'Adalah'+W)
     for i in range(1, x+1):
         if x % i == 0:
             print (" ", i)
 
 def faktor():
-    num = int(input(C+' Masukkan Bilangan'+R+' > '+W))
+    num = int(input(C+' Masukkan Bilangan '+R+'> '+W))
     fakt(num)
 
 def mean():
-    data = str(input(C+' Masukkan Data'+R+' > '+W))
+    data = str(input(C+' Masukkan Data '+R+'> '+W))
     a = str(round(sum(data) / len(data), 2))
-    print(C+' Mean'+R+' > '+W+ a)
+    print(C+' Mean '+R+'>'+W+ a)
 
 def median():
-    data = str(input(C+' Masukkan Data'+R+' > '+W))
+    data = str(input(C+' Masukkan Data '+R+'> '+W))
     data.sort()
     if len(data) % 2 == 0:
         a = int(len(data) / 2)
@@ -329,10 +329,10 @@ def median():
         a = int((len(data) + 1) / 2)
         median = str(data[a - 1])
         
-    print(C+' Median'+R+' > '+W, median)
+    print(C+' Median '+R+'>'+W, median)
 
 def modus():
-    data = str(input(C+' Masukkan Data'+R+' > '+W))
+    data = str(input(C+' Masukkan Data '+R+'> '+W))
     modus = max(set(data), key=data.count)
     a = data.count(modus)
     b = []
@@ -349,162 +349,162 @@ def modus():
             modus2.append(str(i))
         modus1 += ' & '.join(modus2)
     
-    print(C+' Modus'+R+' > '+W, modus)
+    print(C+' Modus '+R+'>'+W, modus)
 
 def keliling_persegi () :
-    x= float(input(C+' Sisi'+R+' > '+W))
+    x= float(input(C+' Sisi '+R+'> '+W))
     keliling = 4*x
     print (' ' )
-    print (C+' Keliling'+R+' > '+W, keliling ,C+'cm'+W)
+    print (C+' Keliling '+R+'>'+W, keliling ,C+'cm'+W)
     
 def luas_kubik () :
-	x=float(input(C+' Sisi'+R+' > '+W))
+	x=float(input(C+' Sisi'+R+'> '+W))
 	luas= 6*x*x
 	print (' ' )
-	print (C+' Luas'+R+' > '+W, luas ,C+'cm2'+W)
+	print (C+' Luas'+R+'>'+W, luas ,C+'cm2'+W)
     
 def keliling_persegipanjang () :
-    x= float(input(C+' Panjang'+R+' > '+W))
-    y= float(input(C+' Lebar'+R+' > '+W))
+    x= float(input(C+' Panjang '+R+'> '+W))
+    y= float(input(C+' Lebar '+R+'> '+W))
     keliling = 2*(x+y)
     print (' ' )
-    print (C+' Keliling'+R+' > '+W, keliling ,C+'cm'+W)
+    print (C+' Keliling '+R+'>'+W, keliling ,C+'cm'+W)
     
 def luas_balok () :
-	x= float(input(C+' Panjang'+R+' > '+W))
-	y= float(input(C+' Lebar'+R+' > '+W))
-	z= float(input(C+' Tinggi'+R+' > '+W))
+	x= float(input(C+' Panjang '+R+'> '+W))
+	y= float(input(C+' Lebar '+R+'> '+W))
+	z= float(input(C+' Tinggi '+R+'> '+W))
 	luas= 2*((x*y)+(x*z)+(y*z))
 	print (' ' )
-	print (C+' Luas'+R+' > '+W, luas ,C+'cm2'+W)
+	print (C+' Luas '+R+'>'+W, luas ,C+'cm2'+W)
     
 def volume_limas () :
-	x= float(input(C+' Luas Alas'+R+' > '+W))
-	y= float(input(C+' Tinggi'+R+' > '+W))
+	x= float(input(C+' Luas Alas '+R+'> '+W))
+	y= float(input(C+' Tinggi '+R+'> '+W))
 	volume = 1/3*x*y
 	print (' ' )
-	print (C+' Volume'+R+' > '+W, volume ,C+'cm3'+W)
+	print (C+' Volume '+R+'>'+W, volume ,C+'cm3'+W)
 	
 def keliling_segitiga () :
-    ab= float(input(C+' Panjang AB'+R+' > '+W))
-    bc= float(input(C+' Panjang BC'+R+' > '+W))
-    ca= float(input(C+' Panjang CA'+R+' > '+W))
+    ab= float(input(C+' Panjang AB '+R+'> '+W))
+    bc= float(input(C+' Panjang BC '+R+'> '+W))
+    ca= float(input(C+' Panjang CA '+R+'> '+W))
     keliling = ab+bc+ca
     print (' ' )
-    print (C+' Keliling'+R+' > '+W, keliling ,C+'cm'+W)
+    print (C+' Keliling '+R+'>'+W, keliling ,C+'cm'+W)
 
 def luas_bola () :
-	x = float(input(C+' Jari Jari'+R+' > '+W))
+	x = float(input(C+' Jari Jari '+R+'> '+W))
 	luas = 4*22/7*x*x
 	print ('')
-	print (C+' Luas'+R+' > '+W, luas ,C+'cm2'+W)
+	print (C+' Luas '+R+'>'+W, luas ,C+'cm2'+W)
               
 def keliling_jajargenjang () :
-    ab= float(input(C+' Panjang AB'+R+' > '+W))
-    bc= float(input(C+' Panjang BC'+R+' > '+W))
-    cd= float(input(C+' Panjang CD'+R+' > '+W))
-    da= float(input(C+' Panjang DA'+R+' > '+W))
+    ab= float(input(C+' Panjang AB '+R+'> '+W))
+    bc= float(input(C+' Panjang BC '+R+'> '+W))
+    cd= float(input(C+' Panjang CD '+R+'> '+W))
+    da= float(input(C+' Panjang DA '+R+'> '+W))
     keliling = ab+bc+cd+da
     print ('')
-    print (C+' Keliling'+R+' > '+W, keliling ,C+'cm'+W)
+    print (C+' Keliling '+R+'>'+W, keliling ,C+'cm'+W)
 
 def keliling_trapesium () :
-    ab= float(input(C+' Panjang AB'+R+' > '+W))
-    bc= float(input(C+' Panjang BC'+R+' > '+W))
-    cd= float(input(C+' Panjang CD'+R+' > '+W))
-    da= float(input(C+' Panjang DA'+R+' > '+W))
+    ab= float(input(C+' Panjang AB '+R+'> '+W))
+    bc= float(input(C+' Panjang BC '+R+'> '+W))
+    cd= float(input(C+' Panjang CD '+R+'> '+W))
+    da= float(input(C+' Panjang DA '+R+'> '+W))
     keliling = ab+bc+cd+da
     print ('')
-    print (C+' Keliling'+R+' > '+W, keliling ,C+'cm'+W)
+    print (C+' Keliling '+R+'>'+W, keliling ,C+'cm'+W)
              
 def keliling_ketupat () :
-    z= float(input(C+' Sisi'+R+' > '+W))
+    z= float(input(C+' Sisi '+R+'> '+W))
     keliling = 4*z
     print ('')
-    print (C+' Keliling'+R+' > '+W, keliling ,C+'cm'+W)
+    print (C+' Keliling '+R+'>'+W, keliling ,C+'cm'+W)
     
 def keliling_layang () :
-	ab= float(input(C+' Panjang AB'+R+' > '+W))
-	bc= float(input(C+' Panjang BC'+R+' > '+W))
+	ab= float(input(C+' Panjang AB '+R+'> '+W))
+	bc= float(input(C+' Panjang BC '+R+'> '+W))
 	keliling = 2*(ab+bc)
 	print (' ' )
-	print (C+' Keliling'+R+' > '+W, keliling ,C+'cm'+W)
+	print (C+' Keliling '+R+'>'+W, keliling ,C+'cm'+W)
 
 
 def luas_persegi () :
-    x= float(input(C+' Sisi'+R+' > '+W))
+    x= float(input(C+' Sisi '+R+'> '+W))
     luas= x*x
     print (' ' )
-    print (C+' Luas'+R+' > '+W, luas ,C+'cm2'+W)
+    print (C+' Luas '+R+'>'+W, luas ,C+'cm2'+W)
     
 def volume_kubik () :
-    x=float(input(C+' Sisi'+R+' > '+W))
+    x=float(input(C+' Sisi '+R+'> '+W))
     volume= x*x*x
     print (' ' )
-    print (C+' Volume'+R+' > '+W, volume ,C+'cm3'+W)
+    print (C+' Volume '+R+'>'+W, volume ,C+'cm3'+W)
     
 def luas_persegipanjang () :
-    x= float(input(C+' Panjang'+R+' > '+W))
-    y= float(input(C+' Lebar'+R+' > '+W))
+    x= float(input(C+' Panjang'+R+'> '+W))
+    y= float(input(C+' Lebar'+R+'> '+W))
     luas= x*y
     print (' ' )
-    print (C+' Luas'+R+' > '+W, luas ,C+'cm2'+W)
+    print (C+' Luas'+R+'>'+W, luas ,C+'cm2'+W)
     
 def volume_balok () :
-    x= float(input(C+' Panjang'+R+' > '+W))
-    y= float(input(C+' Lebar'+R+' > '+W))
-    z= float(input(C+' Tinggi'+R+' > '+W))
+    x= float(input(C+' Panjang '+R+'> '+W))
+    y= float(input(C+' Lebar '+R+'> '+W))
+    z= float(input(C+' Tinggi '+R+'> '+W))
     volume= x*y*z
     print (' ' )
-    print (C+' Volume'+R+' > '+W, volume ,C+'cm3'+W)
+    print (C+' Volume '+R+'>'+W, volume ,C+'cm3'+W)
     
 def luas_segitiga () :
-    x= float(input(C+' Alas'+R+' > '+W))
-    y= float(input(C+' Tinggi'+R+' > '+W))
+    x= float(input(C+' Alas '+R+'> '+W))
+    y= float(input(C+' Tinggi '+R+'> '+W))
     luas=0.5*x*y
     print (' ' )
-    print (C+' Luas'+R+' > '+W, luas ,C+'cm2'+W)
+    print (C+' Luas '+R+'>'+W, luas ,C+'cm2'+W)
 
 def luas_lingkaran () :
-    x = float(input(C+' Jari Jari'+R+' > '+W))
+    x = float(input(C+' Jari Jari '+R+'> '+W))
     luas = 22/7*x*x
     print ('')
-    print (C+' Luas'+R+' > '+W, luas ,C+'cm2'+W)
+    print (C+' Luas '+R+'>'+W, luas ,C+'cm2'+W)
 
 def volume_bola () :
-    x = float(input(C+' Jari Jari'+R+' > '+W))
+    x = float(input(C+' Jari Jari '+R+'> '+W))
     volume = 4/3*22/7*x*x*x
     print ('')
-    print (C+' Volume'+R+' > '+W, volume ,C+'cm3'+W)
+    print (C+' Volume '+R+'>'+W, volume ,C+'cm3'+W)
               
 def luas_jajargenjang () :
-    x= float(input(C+' Tinggi'+R+' > '+W))
-    y= float(input(C+' Alas'+R+' > '+W))
+    x= float(input(C+' Tinggi '+R+'> '+W))
+    y= float(input(C+' Alas '+R+'> '+W))
     luas = x*y
     print ('')
-    print (C+' Luas'+R+' > '+W, luas ,C+'cm2'+W)
+    print (C+' Luas '+R+'>'+W, luas ,C+'cm2'+W)
 
 def luas_trapesium () :
-    x= float(input(C+' Sisi Atas'+R+' > '+W))
-    y= float(input(C+' Sisi Bawah'+R+' > '+W))
-    z= float(input(C+' Tinggi'+R+' > '+W))
+    x= float(input(C+' Sisi Atas '+R+'> '+W))
+    y= float(input(C+' Sisi Bawah '+R+'> '+W))
+    z= float(input(C+' Tinggi '+R+'> '+W))
     luas = (x+y)*z/2
     print ('')
-    print (C+' Luas'+R+' > '+W, luas ,C+'cm2'+W)
+    print (C+' Luas '+R+'>'+W, luas ,C+'cm2'+W)
              
 def luas_ketupat () :
-    x= float(input(C+' Diagonal 1'+R+' > '+W))
-    y= float(input(C+' Diagonal 2'+R+' > '+W))
+    x= float(input(C+' Diagonal 1 '+R+'> '+W))
+    y= float(input(C+' Diagonal 2 '+R+'> '+W))
     luas = 0.5*x*y
     print ('')
-    print (C+' Luas'+R+' > '+W, luas ,C+'cm2'+W)
+    print (C+' Luas '+R+'>'+W, luas ,C+'cm2'+W)
     
 def luas_layang () :
-    x= float(input(C+' Diagonal 1'+R+' > '+W))
-    y= float(input(C+' Diagonal 2'+R+' > '+W))
+    x= float(input(C+' Diagonal 1 '+R+'> '+W))
+    y= float(input(C+' Diagonal 2 '+R+'> '+W))
     luas = 0.5*x*y
     print (' ' )
-    print (C+' Luas'+R+' > '+W, luas ,C+'cm2'+W)
+    print (C+' Luas '+R+'>'+W, luas ,C+'cm2'+W)
 	
 def medus() :      
     print ('')
@@ -733,6 +733,7 @@ def menu():
     print ('')
     print (C+' help'+R+'      :'+W+' Help')
     print (C+' about'+R+'     :'+W+' About')
+    print (C+' exit'+R+'      :'+W+' Exit')
     print ('')
 
 def main():
