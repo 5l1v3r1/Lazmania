@@ -1,8 +1,8 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Python 3
-# Gausah pake acara Recode Recode segala ya Kontol
-import math , requests , os , time , datetime , re , json , string , random
+import math , requests , os , time , datetime , re , json , string , random , hashlib , sys
 from bs4 import BeautifulSoup
+from string import *
 
 
 W  = '\033[0m'  # white (default)
@@ -21,7 +21,7 @@ def banner():
     print (O+" / `.`. ,-'         `-/ /   ) "+W+"  ________| "+C+"hEllO, L4zy pe0ple!!"+W+" |")
     print (O+"(    `,'             _ \   ;  "+W+" /        |______________________|")
     print (O+" \  _( _           ,'  )/  : "+W+"_/                                 ")
-    print (O+"  \ `-( `-.      ,'    /  /                              "+G+" v.5.0 ")
+    print (O+"  \ `-( `-.      ,'    /  /                            "+G+" v.5.bt  ")
     print (O+"   \   \ __`.___/_,-( /_,' "+R+"_    ____ ___  _  _ ____ _  _ _ ____ ")
     print (O+"    `--'`,\_o,(_)o_,',     "+R+"|    |__|   /  |\/| |__| |\ | | |__| ")
     print (O+"        (    /`-'\    )    "+R+"|___ |  |  /__ |  | |  | | \| | |  | ")
@@ -122,6 +122,7 @@ def help():
     pilbangundatar()
     pilbangunruang()
     phytool()
+    crypto()
     glurus()
     glurusbc()
     glurusbl()
@@ -676,40 +677,53 @@ def lk21():
     print ("")
 
 def generate() :
-    pil = str(input(R+' Input Base '+W+'(Y/N)'+R+'? '+C+'> '+W))
+    pil = str(input(C+" Input Base (y/n) ? "+R+"> "+W))
     if pil == 'n' or pil == 'N' :
-        size = int(input(R+' Jumlah digit Kode '+C+'> '+W))
-        case = str(input(R+' UPPER/lower '+W+'(U/l)'+R+'? '+W))
-        total = int(input(R+' Total Kode '+C+'> '+W))
+        size = int(input(C+" Jumlah digit kode "+R+"> "+W))
+        case = str(input(C+" UPPER/lower (U/l) ? "+R+"> "+W))
+        total = int(input(C+" Total kode "+R+"> "+W))
         if case == 'u' or case == 'U' :
             def rand(chars=string.ascii_uppercase + string.digits):
                 return ''.join(random.choice(chars) for _ in range(size))
             for i in range(total):
-                print (rand())
+                print (' '+rand())
         elif case == 'l' or case == 'L' :
             def rand(chars=string.ascii_lowercase + string.digits):
                 return ''.join(random.choice(chars) for _ in range(size))
             for i in range(total):
-                print (rand())
+                print (' '+rand())
     elif pil == 'y' or pil == 'Y' :
-        base = int(input(R+' Jumlah digit Base '+C+'> '+W))
-        base1 = str(input(R+' Input Base '+C+'> '+W))
-        variant = base1
-        size = int(input(R+' Jumlah digit Kode '+C+'> '+W))
-        case = str(input(R+' UPPER/lower '+W+'(U/l)'+R+'? '+W))
-        total = int(input(R+' Total Kode '+C+'> '+W))
+        base = str(input(C+' Base '+R+'> '+W))
+        size = int(input(C+" Jumlah digit kode "+R+"> "+W))
+        case = str(input(C+" UPPER/lower (U/l) ? "+R+"> "+W))
+        total = int(input(C+" Total kode "+R+"> "+W))
         if case == 'u' or case == 'U' :
             def rand(chars=string.ascii_uppercase + string.digits):
-                return ''.join(random.choice(chars) for _ in range(size-base))
+                return ''.join(random.choice(chars) for _ in range(size-len(base)))
             for i in range(total):
-                print (variant+rand())
+                print (' '+base+rand())
         elif case == 'l' or case == 'L' :
             def rand(chars=string.ascii_lowercase + string.digits):
-                return ''.join(random.choice(chars) for _ in range(size-base))
+                return ''.join(random.choice(chars) for _ in range(size-len(base)))
             for i in range(total):
-                print (variant+rand())
+                print (' '+base+rand())
 
-def mathtool() :
+def betaprogram():
+    print ('')
+    print (O+' COMINGSOON !!'+W)
+    print ('')
+
+def crypto():
+    print ('')
+    print (C+' demd5'+R+'     :'+W+' Decode MD5')
+    print (C+' desha1'+R+'    :'+W+' Decode SHA1')
+    print (C+' desha224'+R+'  :'+W+' Decode SHA224')
+    print (C+' desha256'+R+'  :'+W+' Decode SHA256')
+    print (C+' desha384'+R+'  :'+W+' Decode SHA384')
+    print (C+' desha512'+R+'  :'+W+' Decode SHA512')
+    print ('')
+
+def mathtool():
     print ('')
     print (C+' bd'+R+'        :'+W+' Bangun Datar')
     print (C+' br'+R+'        :'+W+' Bangun Ruang')
@@ -727,6 +741,7 @@ def menu():
     print ('')
     print (C+' math'+R+'      :'+W+' Math Tool')
     print (C+' phy'+R+'       :'+W+' Physics Tool')
+    print (C+' crypt'+R+'     :'+W+' Crypto Tool')
     print (C+' 0brain'+R+'    :'+W+' Brainly Seeker')
     print (C+' lkx21'+R+'     :'+W+' LK21 Bypass Shortlink')
     print (C+' custgen'+R+'   :'+W+' Custom Code Generator')
@@ -763,7 +778,10 @@ def main():
         mathtool()
         main()
     elif cmd == 'phy' :
-        phytool()
+        betaprogram()
+        main()
+    elif cmd == 'crypt' :
+        betaprogram()
         main()
     elif cmd == '0brain' :
         brainly()
