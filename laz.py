@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# Gausah pake acara Recode Recode segala ya Kontol
 import math , requests , os , time , datetime , re , json , string , random , hashlib , sys
 from bs4 import BeautifulSoup
 from string import *
@@ -73,6 +74,52 @@ def bannerlk_dl():
     print ("██████████████████████████████████████"+C+" ║")
     print ("╚══════════════════════════════════════╝")
     print (W+"")
+
+def readme():
+    os.system('clear')
+    print ("")
+    print (R+"       __   __ ")
+    print (R+"      /  \./  \/\_ ")
+    print (R+"   __{^\_ _}_   )  }"+G+"/^\  "+O+"  Lazy.Frmwrk "+C+"Project      ")
+    print (R+"  /  /\_/^\._}_/  /"+G+"/  / ")
+    print (R+" (  (__{(@)}\__}./"+G+"/_/__A____A_____A________A_____A___")
+    print (R+"  \__/{/(_)\_}  )\\"+G+"\\ \\\---v-----V-----V-v----Y----v----")
+    print (R+"   (   (__)_)_/  )\ "+G+"\> ")
+    print (R+"    \__/     \__/\/"+G+"\/  "+W+"          Readme Doc. ")
+    print (R+"       \__,--' ")
+    print ("")
+    print (C+" ════════════════════"+W+" Change logs"+C+" ════════════════════"+W)
+    print ("")
+    print (O+" ~ Ver.1.0"+W)
+    print ("  - First version of this framework, including ")
+    print ("    Math Tools, 0-Brain, and LKx21")
+    print ("")
+    print (O+" ~ Ver.1.5"+W)
+    print ("  - Adding Custom Code Generator for extrap")
+    print ()
+    print (O+" ~ Ver.2.0"+W)
+    print ("  - Fixing some bugs and adding Help and About menu")
+    print ("")
+    print (O+" ~ Ver.2.5"+W)
+    print ("  - Interface update and Fixing some bugs on ")
+    print ("    Math tools")
+    print ("")
+    print (O+" ~ Ver.3.0"+W)
+    print ("  - This framework now using commands to run ")
+    print ("    several tools on it, command that can be used ")
+    print ("    included at Help menu")
+    print ("")
+    print (O+" ~ Ver.4.0"+W)
+    print ("  - Fixing a little bug on Custom Code Generator")
+    print ("")
+    print (O+" ~ Ver.4.5"+W)
+    print ("  - Adding Physics tools and Interface update")
+    print ("")
+    print (O+" ~ Ver.5.beta"+W)
+    print ("  - Sorry but Physics tools have many invalid ")
+    print ("    operation, now it has been deleted. ")
+    print ("    Checker and Decrypt tools comingsoon")
+    print ("")
 
 def about():
     os.system('clear')
@@ -304,7 +351,7 @@ def prima():
 
 def fakt(x):
     print ("")
-    print (C+' Faktor Dari'+W+ x +C+'Adalah'+W)
+    print (C+' Faktor Dari'+W, x ,C+'Adalah'+W)
     for i in range(1, x+1):
         if x % i == 0:
             print (" ", i)
@@ -314,12 +361,12 @@ def faktor():
     fakt(num)
 
 def mean():
-    data = str(input(C+' Masukkan Data '+R+'> '+W))
+    data = int(input(C+' Masukkan Data '+R+'> '+W))
     a = str(round(sum(data) / len(data), 2))
-    print(C+' Mean '+R+'>'+W+ a)
+    print(C+' Mean '+R+'>'+W, a)
 
 def median():
-    data = str(input(C+' Masukkan Data '+R+'> '+W))
+    data = int(input(C+' Masukkan Data '+R+'> '+W))
     data.sort()
     if len(data) % 2 == 0:
         a = int(len(data) / 2)
@@ -333,7 +380,7 @@ def median():
     print(C+' Median '+R+'>'+W, median)
 
 def modus():
-    data = str(input(C+' Masukkan Data '+R+'> '+W))
+    data = int(input(C+' Masukkan Data '+R+'> '+W))
     modus = max(set(data), key=data.count)
     a = data.count(modus)
     b = []
@@ -742,12 +789,14 @@ def menu():
     print (C+' math'+R+'      :'+W+' Math Tool')
     print (C+' phy'+R+'       :'+W+' Physics Tool')
     print (C+' crypt'+R+'     :'+W+' Crypto Tool')
+    print (C+' check'+R+'     :'+W+' Checker Tool')
     print (C+' 0brain'+R+'    :'+W+' Brainly Seeker')
     print (C+' lkx21'+R+'     :'+W+' LK21 Bypass Shortlink')
     print (C+' custgen'+R+'   :'+W+' Custom Code Generator')
     print ('')
     print (C+' help'+R+'      :'+W+' Help')
     print (C+' about'+R+'     :'+W+' About')
+    print (C+' readme'+R+'    :'+W+' Readme')
     print (C+' exit'+R+'      :'+W+' Exit')
     print ('')
 
@@ -762,6 +811,9 @@ def main():
         main()
     elif cmd == 'help' or cmd == '-h' :
         help()
+        main()
+    elif cmd == 'readme' or cmd == '-r' :
+        readme()
         main()
     elif cmd == 'clear' or cmd == '-c' :
         banner()
@@ -781,6 +833,9 @@ def main():
         betaprogram()
         main()
     elif cmd == 'crypt' :
+        betaprogram()
+        main()
+    elif cmd == 'check' :
         betaprogram()
         main()
     elif cmd == '0brain' :
@@ -811,7 +866,7 @@ def main():
         faktor()
         main()
     elif cmd == 'mm' :
-        medus()
+        betaprogram()
         main()
     elif cmd == 'bdp' :
         persegi()
