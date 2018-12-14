@@ -22,7 +22,7 @@ def banner():
     print (O+" / `.`. ,-'         `-/ /   ) "+W+"  ________| "+C+"hEllO, L4zy pe0ple!!"+W+" |")
     print (O+"(    `,'             _ \   ;  "+W+" /        |______________________|")
     print (O+" \  _( _           ,'  )/  : "+W+"_/                                 ")
-    print (O+"  \ `-( `-.      ,'    /  /                            "+G+" v.5.bt  ")
+    print (O+"  \ `-( `-.      ,'    /  /                            "+G+" v.5.0  ")
     print (O+"   \   \ __`.___/_,-( /_,' "+R+"_    ____ ___  _  _ ____ _  _ _ ____ ")
     print (O+"    `--'`,\_o,(_)o_,',     "+R+"|    |__|   /  |\/| |__| |\ | | |__| ")
     print (O+"        (    /`-'\    )    "+R+"|___ |  |  /__ |  | |  | | \| | |  | ")
@@ -118,7 +118,10 @@ def readme():
     print (O+" ~ Ver.5.beta"+W)
     print ("  - Sorry but Physics tools have many invalid ")
     print ("    operation, now it has been deleted. ")
-    print ("    Decrypt tools added, Checker tools comingsoon")
+    print ("    Decrypt tools added")
+    print ("")
+    print (O+" ~ Ver.5.0"+W)
+    print ("  - Adding some Generator, Checker are comingsoon")
     print ("")
 
 def about():
@@ -653,15 +656,7 @@ def pilbangunruang() :
     print (C+' brbl'+R+'      :'+W+' Bola')
     print ('')
 
-# Options available for string_list are (for example):
-# ascii_letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-# ascii_lowercase = 'abcdefghijklmnopqrstuvwxyz'
-# ascii_uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-# digits = '0123456789'
-# hexdigits = '0123456789abcdefABCDEF'
-# octdigits = '01234567'
-# printable = '0123456789abcdefghijklmnopqrstuvwxyzAB...'
-# whitespace = ' \t\n\r\x0b\x0c'
+ascii_letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
 
 string_list = ascii_letters
 
@@ -853,6 +848,15 @@ def lk21():
         print (C+" ["+W+" 404 "+C+"]"+R+" >"+W+" Film tidak ditemukan")
     print ("")
 
+def hma() :
+    total = int(input(C+" Total "+R+"> "+W))
+    def rand(chars=string.ascii_uppercase + string.digits):
+        return ''.join(random.choice(chars) for _ in range(6))
+    for i in range(total):
+        asd = rand()
+        print (' '+asd+'-'+asd+'-'+asd)
+
+
 def generate() :
     pil = str(input(C+" Input Base (y/n) ? "+R+"> "+W))
     if pil == 'n' or pil == 'N' :
@@ -890,6 +894,11 @@ def betaprogram():
     print (O+' COMINGSOON !!'+W)
     print ('')
 
+def gen():
+    print ('')
+    print (C+' hma'+R+'       :'+W+' HMA License key Generator')
+    print (C+' custgen'+R+'   :'+W+' Custom Code Generator')
+
 def crypto():
     print ('')
     print (C+' demd5'+R+'     :'+W+' Decode MD5')
@@ -919,10 +928,9 @@ def menu():
     print (C+' math'+R+'      :'+W+' Math Tool')
     print (C+' phy'+R+'       :'+W+' Physics Tool')
     print (C+' crypt'+R+'     :'+W+' Crypto Tool')
-    print (C+' check'+R+'     :'+W+' Checker Tool')
     print (C+' 0brain'+R+'    :'+W+' Brainly Seeker')
     print (C+' lkx21'+R+'     :'+W+' LK21 Bypass Shortlink')
-    print (C+' custgen'+R+'   :'+W+' Custom Code Generator')
+    print (C+' gen'+R+'       :'+W+' Generator')
     print ('')
     print (C+' help'+R+'      :'+W+' Help')
     print (C+' about'+R+'     :'+W+' About')
@@ -965,8 +973,8 @@ def main():
     elif cmd == 'crypt' :
         crypto()
         main()
-    elif cmd == 'check' :
-        betaprogram()
+    elif cmd == 'gen' :
+        gen()
         main()
     elif cmd == '0brain' :
         brainly()
@@ -976,6 +984,9 @@ def main():
         main()
     elif cmd == 'custgen' :
         generate()
+        main()
+    elif cmd == 'hma' :
+        hma()
         main()
     elif cmd == 'bd' :
         pilbangundatar()
