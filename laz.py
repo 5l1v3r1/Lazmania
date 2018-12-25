@@ -994,7 +994,7 @@ def apkdl():
             print(C+' ['+W+' Nama Aplikasi '+C+']'+R+' >'+W+' '+ju)
             print(C+' ['+W+' Developer '+C+']'+R+' >'+W+' '+de)
             print ('')
-      print(C+' ['+W+' Aplikasi ditemukan '+C+']'+R+' >'+W+' '+str(len(link)))
+      print(C+' ['+W+' Aplikasi ditemukan '+C+']'+R+' >'+W+' '+str(len(link1)))
       print ('')
       do = int(input(C+' Input Nomor '+R+'> '+W))
       do = do - 1    
