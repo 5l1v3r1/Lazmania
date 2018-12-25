@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # Gausah pake acara Recode Recode segala ya Kontol
-import math , requests , os , time , datetime , re , json , string , random , hashlib , sys
+import math , requests , os , time , datetime , re , json , string , random , hashlib , sys , threading
+from urllib.request import Request, urlopen
 from bs4 import BeautifulSoup
 from string import *
 
@@ -17,162 +18,186 @@ GR = '\033[1;37m' # gray
 
 def banner():
     os.system('clear')
-    print (O+"                         _    "+W+"          ________________________")
-    print (O+"  ,-.      __,---.__   ,',`\  "+W+"          |                      |")
-    print (O+" / `.`. ,-'         `-/ /   ) "+W+"  ________| "+C+"hEllO, L4zy pe0ple!!"+W+" |")
-    print (O+"(    `,'             _ \   ;  "+W+" /        |______________________|")
-    print (O+" \  _( _           ,'  )/  : "+W+"_/                                 ")
-    print (O+"  \ `-( `-.      ,'    /  /                            "+G+" v.5.0  ")
-    print (O+"   \   \ __`.___/_,-( /_,' "+R+"_    ____ ___  _  _ ____ _  _ _ ____ ")
-    print (O+"    `--'`,\_o,(_)o_,',     "+R+"|    |__|   /  |\/| |__| |\ | | |__| ")
-    print (O+"        (    /`-'\    )    "+R+"|___ |  |  /__ |  | |  | | \| | |  | ")
-    print (O+"         `--:\,m//`--'                                               ")
-    print (O+"             `--'          "+GR+"https://github.com/N1ght420         ")
+    print (O+'                         _    '+W+'          ________________________')
+    print (O+'  ,-.      __,---.__   ,\',`\  '+W+'          |                      |')
+    print (O+' / `.`. ,-\'         `-/ /   ) '+W+'  ________| '+C+'hEllO, L4zy pe0ple!!'+W+' |')
+    print (O+'(    `,\'             _ \   ;  '+W+' /        |______________________|')
+    print (O+' \  _( _           ,\'  )/  : '+W+'_/                                 ')
+    print (O+'  \ `-( `-.      ,\'    /  /                            '+G+' v.5.5  ')
+    print (O+'   \   \ __`.___/_,-( /_,\' '+R+'_    ____ ___  _  _ ____ _  _ _ ____ ')
+    print (O+'    `--\'`,\_o,(_)o_,\',     '+R+'|    |__|   /  |\/| |__| |\ | | |__| ')
+    print (O+'        (    /`-\'\    )    '+R+'|___ |  |  /__ |  | |  | | \| | |  | ')
+    print (O+'         `--:\,m//`--\'                                               ')
+    print (O+'             `--\'          '+GR+'https://github.com/N1ght420         ')
 
 def bannerbr():
     os.system('clear')
-    print (W+"       ,   ,    ")
-    print ("      /////|    ")
-    print ("     ///// |    ")
-    print ("    |~~~|  |    ")
-    print ("    |===|  |    "+C+"Brainly Answer Seeker "+O+"v.1.5"+W)
-    print ("    |   |  |    "+GR+"https://github.com/N1ght420"+W)
-    print ("    |   |  |    ")
-    print ("    |   | /     ")
-    print ("    |===|/      ")
-    print ("    '---'       ")
-    print ("")
+    print (W+'       ,   ,    ')
+    print ('      /////|    ')
+    print ('     ///// |    ')
+    print ('    |~~~|  |    ')
+    print ('    |===|  |    '+C+'Brainly Answer Seeker '+O+'v.1.5'+W)
+    print ('    |   |  |    '+GR+'https://github.com/N1ght420'+W)
+    print ('    |   |  |    ')
+    print ('    |   | /     ')
+    print ('    |===|/      ')
+    print ('    '---'       ')
+    print ('')
 
 def bannerlk():
     os.system('clear')
-    print (R+"██████████████████████████████████████"+C+"═╗")
-    print ("╚═══════════════════════════════════"+R+"██"+C+" ║"+R)
-    print ("                                    ██"+C+" ║"+W)
-    print (W+"    ██╗     ██╗  ██╗██████╗  ██╗    "+R+"██"+C+" ║"+W)
-    print (W+"    ██║     ██║ ██╔╝╚════██╗███║    "+R+"██"+C+" ║"+W)
-    print (W+"    ██║     █████╔╝  █████╔╝╚██║    "+R+"██"+C+" ║"+W)
-    print (W+"    ██║     ██╔═██╗ ██╔═══╝  ██║    "+R+"██"+C+" ║"+W)
-    print (W+"    ███████╗██║  ██╗███████╗ ██║    "+R+"██"+C+" ║"+W)
-    print (W+"    ╚══════╝╚═╝  ╚═╝╚══════╝ ╚═╝    "+R+"██"+C+" ║"+R)
-    print ("                                    ██"+C+" ║"+R)
-    print ("██████████████████████████████████████"+C+" ║")
-    print ("╚══════════════════════════════════════╝")
-    print (W+"")
+    print (R+'██████████████████████████████████████'+C+'═╗')
+    print ('╚═══════════════════════════════════'+R+'██'+C+' ║'+R)
+    print ('                                    ██'+C+' ║'+W)
+    print (W+'    ██╗     ██╗  ██╗██████╗  ██╗    '+R+'██'+C+' ║'+W)
+    print (W+'    ██║     ██║ ██╔╝╚════██╗███║    '+R+'██'+C+' ║'+W)
+    print (W+'    ██║     █████╔╝  █████╔╝╚██║    '+R+'██'+C+' ║'+W)
+    print (W+'    ██║     ██╔═██╗ ██╔═══╝  ██║    '+R+'██'+C+' ║'+W)
+    print (W+'    ███████╗██║  ██╗███████╗ ██║    '+R+'██'+C+' ║'+W)
+    print (W+'    ╚══════╝╚═╝  ╚═╝╚══════╝ ╚═╝    '+R+'██'+C+' ║'+R)
+    print ('                                    ██'+C+' ║'+R)
+    print ('██████████████████████████████████████'+C+' ║')
+    print ('╚══════════════════════════════════════╝')
+    print (W+'')
 
 def bannerlk_dl():
     os.system('clear')
-    print (R+"██████████████████████████████████████"+C+"═╗")
-    print ("╚═══════════════════════════════════"+R+"██"+C+" ║"+R)
-    print ("                                    ██"+C+" ║")
-    print (W+"    ██╗     ██╗  ██╗██████╗  ██╗    "+R+"██"+C+" ║  ═════════════════════════════")
-    print (W+"    ██║     ██║ ██╔╝╚════██╗███║    "+R+"██"+C+" ║"+W)
-    print (W+"    ██║     █████╔╝  █████╔╝╚██║    "+R+"██"+C+" ║"+W+"   ", time.ctime())
-    print (W+"    ██║     ██╔═██╗ ██╔═══╝  ██║    "+R+"██"+C+" ║"+W+"    https://layarkaca21.vip")
-    print (W+"    ███████╗██║  ██╗███████╗ ██║    "+R+"██"+C+" ║"+W)
-    print (W+"    ╚══════╝╚═╝  ╚═╝╚══════╝ ╚═╝    "+R+"██"+C+" ║  ═════════════════════════════"+R)
-    print ("                                    ██"+C+" ║"+W+"   https://github.com/N1ght420"+R)
-    print ("██████████████████████████████████████"+C+" ║")
-    print ("╚══════════════════════════════════════╝")
-    print (W+"")
+    print (R+'██████████████████████████████████████'+C+'═╗')
+    print ('╚═══════════════════════════════════'+R+'██'+C+' ║'+R)
+    print ('                                    ██'+C+' ║')
+    print (W+'    ██╗     ██╗  ██╗██████╗  ██╗    '+R+'██'+C+' ║  ═════════════════════════════')
+    print (W+'    ██║     ██║ ██╔╝╚════██╗███║    '+R+'██'+C+' ║'+W)
+    print (W+'    ██║     █████╔╝  █████╔╝╚██║    '+R+'██'+C+' ║'+W+'   ', time.ctime())
+    print (W+'    ██║     ██╔═██╗ ██╔═══╝  ██║    '+R+'██'+C+' ║'+W+'    https://layarkaca21.vip')
+    print (W+'    ███████╗██║  ██╗███████╗ ██║    '+R+'██'+C+' ║'+W)
+    print (W+'    ╚══════╝╚═╝  ╚═╝╚══════╝ ╚═╝    '+R+'██'+C+' ║  ═════════════════════════════'+R)
+    print ('                                    ██'+C+' ║'+W+'   https://github.com/N1ght420'+R)
+    print ('██████████████████████████████████████'+C+' ║')
+    print ('╚══════════════════════════════════════╝')
+    print (W+'')
+
+def bannerapk():
+    os.system('clear')
+    print (R+'     .')
+    print (R+'   .:;:.   '+C+'     .     ')
+    print (R+' .:;;;;;:. '+C+'       .  '+W+'  @@@@@@  @@@@@@@  @@@  @@@  ')
+    print (R+'   ;;;;;   '+C+'   . ;.   '+W+' @@!  @@@ @@!  @@@ @@!  !@@  ')
+    print (R+'   ;;;;;   '+C+'    .;    '+W+' @!@!@!@! @!@@!@!  @!@@!@!   ')
+    print (R+'   ;;;;;   '+C+'     ;;.  '+W+' !!:  !!! !!:      !!: :!!   ')
+    print (R+'   ;;;;;   '+C+'   ;.;;   '+W+'  :   : :  :        :   :::  ')
+    print (R+'   ;:;;;   '+C+'   ;;;;.   ')
+    print (R+'   : ;;;   '+C+'   ;;;;;  '+W+'      @@@@@@@   @@@@@@  @@@  @@@  @@@ @@@  @@@ ')
+    print (R+'     ;:;   '+C+'   ;;;;;  '+W+'      @@!  @@@ @@!  @@@ @@!  @@!  @@! @@!@!@@@ ')
+    print (R+'   . :.;   '+C+'   ;;;;;  '+W+'      @!@  !@! @!@  !@! @!!  !!@  @!@ @!@@!!@! ')
+    print (R+'     . :   '+C+'   ;;;;;  '+W+'      !!:  !!! !!:  !!!  !:  !!:  !!  !!:  !!! ')
+    print (R+'   .   .   '+C+'   ;;;;;  '+W+'      :: :  :   : :. :    ::.:  :::   ::    :  ')
+    print (R+'           '+C+' ..;;;;;.. ')
+    print (R+'      .    '+C+'  \':::::\' '+GR+'               https://github.com/karjok')
+    print (R+'           '+C+'    \':`    '+W)
+    print ('')
 
 def readme():
     os.system('clear')
-    print ("")
-    print (R+"       __   __ ")
-    print (R+"      /  \./  \/\_ ")
-    print (R+"   __{^\_ _}_   )  }"+G+"/^\  "+O+"  Lazy.Frmwrk "+C+"Project      ")
-    print (R+"  /  /\_/^\._}_/  /"+G+"/  / ")
-    print (R+" (  (__{(@)}\__}./"+G+"/_/__A____A_____A________A_____A___")
-    print (R+"  \__/{/(_)\_}  )\\"+G+"\\ \\\---v-----V-----V-v----Y----v----")
-    print (R+"   (   (__)_)_/  )\ "+G+"\> ")
-    print (R+"    \__/     \__/\/"+G+"\/  "+W+"          Readme Doc. ")
-    print (R+"       \__,--' ")
-    print ("")
-    print (C+" ════════════════════"+W+" Change logs"+C+" ════════════════════"+W)
-    print ("")
-    print (O+" ~ Ver.1.0"+W)
-    print ("  - First version of this framework, including ")
-    print ("    Math Tools, 0-Brain, and LKx21")
-    print ("")
-    print (O+" ~ Ver.1.5"+W)
-    print ("  - Adding Custom Code Generator for extrap")
+    print ('')
+    print (R+'       __   __ ')
+    print (R+'      /  \./  \/\_ ')
+    print (R+'   __{^\_ _}_   )  }'+G+'/^\  '+O+'  Lazy.Frmwrk '+C+'Project      ')
+    print (R+'  /  /\_/^\._}_/  /'+G+'/  / ')
+    print (R+' (  (__{(@)}\__}./'+G+'/_/__A____A_____A________A_____A___')
+    print (R+'  \__/{/(_)\_}  )\\'+G+'\\ \\\---v-----V-----V-v----Y----v----')
+    print (R+'   (   (__)_)_/  )\ '+G+'\> ')
+    print (R+'    \__/     \__/\/'+G+'\/  '+W+'          Readme Doc. ')
+    print (R+'       \__,--\' ')
+    print ('')
+    print (C+' ════════════════════'+W+' Change logs'+C+' ════════════════════'+W)
+    print ('')
+    print (O+' ~ Ver.1.0'+W)
+    print ('  - First version of this framework, including ')
+    print ('    Math Tools, 0-Brain, and LKx21')
+    print ('')
+    print (O+' ~ Ver.1.5'+W)
+    print ('  - Adding Custom Code Generator for extrap')
     print ()
-    print (O+" ~ Ver.2.0"+W)
-    print ("  - Fixing some bugs and adding Help and About menu")
-    print ("")
-    print (O+" ~ Ver.2.5"+W)
-    print ("  - Interface update and Fixing some bugs on ")
-    print ("    Math tools")
-    print ("")
-    print (O+" ~ Ver.3.0"+W)
-    print ("  - This framework now using commands to run ")
-    print ("    several tools on it, command that can be used ")
-    print ("    included at Help menu")
-    print ("")
-    print (O+" ~ Ver.4.0"+W)
-    print ("  - Fixing a little bug on Custom Code Generator")
-    print ("")
-    print (O+" ~ Ver.4.5"+W)
-    print ("  - Adding Physics tools and Interface update")
-    print ("")
-    print (O+" ~ Ver.5.beta"+W)
-    print ("  - Sorry but Physics tools have many invalid ")
-    print ("    operation, now it has been deleted. ")
-    print ("    Decrypt tools added")
-    print ("")
-    print (O+" ~ Ver.5.0"+W)
-    print ("  - Adding some Generator, Checker are comingsoon")
-    print ("")
+    print (O+' ~ Ver.2.0'+W)
+    print ('  - Fixing some bugs and adding Help and About menu')
+    print ('')
+    print (O+' ~ Ver.2.5'+W)
+    print ('  - Interface update and Fixing some bugs on ')
+    print ('    Math tools')
+    print ('')
+    print (O+' ~ Ver.3.0'+W)
+    print ('  - This framework now using commands to run ')
+    print ('    several tools on it, command that can be used ')
+    print ('    included at Help menu')
+    print ('')
+    print (O+' ~ Ver.4.0'+W)
+    print ('  - Fixing a little bug on Custom Code Generator')
+    print ('')
+    print (O+' ~ Ver.4.5'+W)
+    print ('  - Adding Physics tools and Interface update')
+    print ('')
+    print (O+' ~ Ver.5.beta'+W)
+    print ('  - Sorry but Physics tools have many invalid ')
+    print ('    operation, now it has been deleted. ')
+    print ('    Decrypt tools added')
+    print ('')
+    print (O+' ~ Ver.5.0'+W)
+    print ('  - Adding some Generator, Checker are comingsoon')
+    print ('')
+    print (O+' ~ Ver.5.5'+W)
+    print ('  - Adding APK Downloader')
+    print ('')
 
 def about():
     os.system('clear')
-    print ("")
-    print (R+"       __   __ ")
-    print (R+"      /  \./  \/\_ ")
-    print (R+"   __{^\_ _}_   )  }"+G+"/^\  "+O+"  Lazy.Frmwrk "+C+"Project      ")
-    print (R+"  /  /\_/^\._}_/  /"+G+"/  / ")
-    print (R+" (  (__{(@)}\__}./"+G+"/_/__A____A_____A________A_____A___")
-    print (R+"  \__/{/(_)\_}  )\\"+G+"\\ \\\---v-----V-----V-v----Y----v----")
-    print (R+"   (   (__)_)_/  )\ "+G+"\> ")
-    print (R+"    \__/     \__/\/"+G+"\/  "+W+"    About Me and My Tool")
-    print (R+"       \__,--' ")
-    print ("")
-    print (C+" Name       "+R+":"+W+" Rakka Pratama Putra")
-    print (C+" Birth      "+R+":"+W+" 16 August 2003")
-    print (C+" Country    "+R+":"+W+" ID")
-    print (C+" Fav. Color "+R+":"+W+" White")
-    print ("")
-    print (C+" ═══════════════════════"+W+" About"+C+" ═══════════════════════"+W)
-    print ("")
-    print (" I made this framework initially just for fun")
-    print (" but finally I developed this framework by adding")
-    print (" some tools for lazy society out there.")
-    print (" Maybe now I can only add a few tools in this framework,")
-    print (" and I will continue to update them")
-    print ("")
+    print ('')
+    print (R+'       __   __ ')
+    print (R+'      /  \./  \/\_ ')
+    print (R+'   __{^\_ _}_   )  }'+G+'/^\  '+O+'  Lazy.Frmwrk '+C+'Project      ')
+    print (R+'  /  /\_/^\._}_/  /'+G+'/  / ')
+    print (R+' (  (__{(@)}\__}./'+G+'/_/__A____A_____A________A_____A___')
+    print (R+'  \__/{/(_)\_}  )\\'+G+'\\ \\\---v-----V-----V-v----Y----v----')
+    print (R+'   (   (__)_)_/  )\ '+G+'\> ')
+    print (R+'    \__/     \__/\/'+G+'\/  '+W+'    About Me and My Tool')
+    print (R+'       \__,--\' ')
+    print ('')
+    print (C+' Name       '+R+':'+W+' Rakka Pratama Putra')
+    print (C+' Birth      '+R+':'+W+' 16 August 2003')
+    print (C+' Country    '+R+':'+W+' ID')
+    print (C+' Fav. Color '+R+':'+W+' White')
+    print ('')
+    print (C+' ═══════════════════════'+W+' About'+C+' ═══════════════════════'+W)
+    print ('')
+    print (' I made this framework initially just for fun')
+    print (' but finally I developed this framework by adding')
+    print (' some tools for lazy society out there.')
+    print (' Maybe now I can only add a few tools in this framework,')
+    print (' and I will continue to update them')
+    print ('')
 
 def help():
     os.system('clear')
-    print ("")
-    print (R+"       __   __ ")
-    print (R+"      /  \./  \/\_ ")
-    print (R+"   __{^\_ _}_   )  }"+G+"/^\  "+O+"  Lazy.Frmwrk "+C+"Project      ")
-    print (R+"  /  /\_/^\._}_/  /"+G+"/  / ")
-    print (R+" (  (__{(@)}\__}./"+G+"/_/__A____A_____A________A_____A___")
-    print (R+"  \__/{/(_)\_}  )\\"+G+"\\ \\\---v-----V-----V-v----Y----v----")
-    print (R+"   (   (__)_)_/  )\ "+G+"\> ")
-    print (R+"    \__/     \__/\/"+G+"\/  "+W+"          How To Use")
-    print (R+"       \__,--' ")
-    print ("")
-    print (W+" This framework uses the command to run several tools in it")
-    print ("")
-    print (W+" Commands that can be used, including :")
+    print ('')
+    print (R+'       __   __ ')
+    print (R+'      /  \./  \/\_ ')
+    print (R+'   __{^\_ _}_   )  }'+G+'/^\  '+O+'  Lazy.Frmwrk '+C+'Project      ')
+    print (R+'  /  /\_/^\._}_/  /'+G+'/  / ')
+    print (R+' (  (__{(@)}\__}./'+G+'/_/__A____A_____A________A_____A___')
+    print (R+'  \__/{/(_)\_}  )\\'+G+'\\ \\\---v-----V-----V-v----Y----v----')
+    print (R+'   (   (__)_)_/  )\ '+G+'\> ')
+    print (R+'    \__/     \__/\/'+G+'\/  '+W+'          How To Use')
+    print (R+'       \__,--\' ')
+    print ('')
+    print (W+' This framework uses the command to run several tools in it')
+    print ('')
+    print (W+' Commands that can be used, including :')
     menu()
     mathtool()
     pilbangundatar()
     pilbangunruang()
     phytool()
     crypto()
+    apkmenu()
     glurus()
     glurusbc()
     glurusbl()
@@ -353,11 +378,11 @@ def prima():
         print (C+' Angka'+W, num ,R+'Bukan Bilangan Prima'+W)
 
 def fakt(x):
-    print ("")
+    print ('')
     print (C+' Faktor Dari'+W, x ,C+'Adalah'+W)
     for i in range(1, x+1):
         if x % i == 0:
-            print (" ", i)
+            print (' ', i)
 
 def faktor():
     num = int(input(C+' Masukkan Bilangan '+R+'> '+W))
@@ -661,22 +686,22 @@ ascii_letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
 string_list = ascii_letters
 
 def generateHashFromString(hashMethod, cleartextString):
-    if hashMethod == "md5":
+    if hashMethod == 'md5':
         return hashlib.md5(cleartextString.encode()).hexdigest()
     
-    elif hashMethod == "sha1":
+    elif hashMethod == 'sha1':
         return hashlib.sha1(cleartextString.encode()).hexdigest()
     
-    elif hashMethod == "sha224":
+    elif hashMethod == 'sha224':
         return hashlib.sha224(cleartextString.encode()).hexdigest()
     
-    elif hashMethod == "sha256":
+    elif hashMethod == 'sha256':
         return hashlib.sha256(cleartextString.encode()).hexdigest()
     
-    elif hashMethod == "sha384":
+    elif hashMethod == 'sha384':
         return hashlib.sha384(cleartextString.encode()).hexdigest()
     
-    elif hashMethod == "sha512":
+    elif hashMethod == 'sha512':
         return hashlib.sha512(cleartextString.encode()).hexdigest()
     else:
         pass
@@ -701,86 +726,86 @@ def StringGenerator(string):
     return string
 
 def demd5():
-    hashMethod = "md5"
+    hashMethod = 'md5'
     stringToBeCracked = str(input(C+' Input Hash '+R+'> '+W))
     generated_string = []
     
     while True:
         generated_string = StringGenerator(generated_string)
-        formatted_string = reverseString("".join(generated_string))
+        formatted_string = reverseString(''.join(generated_string))
         
         if generateHashFromString(hashMethod, formatted_string)  == stringToBeCracked:
-            print(C+" String "+R+">"+W+" {}".format(formatted_string))
+            print(C+' String '+R+'>'+W+' {}'.format(formatted_string))
             main()
 
 def desha1():
-    hashMethod = "sha1"
+    hashMethod = 'sha1'
     stringToBeCracked = str(input(C+' Input Hash '+R+'> '+W))
     generated_string = []
     
     while True:
         generated_string = StringGenerator(generated_string)
-        formatted_string = reverseString("".join(generated_string))
+        formatted_string = reverseString(''.join(generated_string))
         
         if generateHashFromString(hashMethod, formatted_string)  == stringToBeCracked:
-            print(C+" String "+R+">"+W+" {}".format(formatted_string))
+            print(C+' String '+R+'>'+W+' {}'.format(formatted_string))
             main()
 
 def desha224():
-    hashMethod = "sha224"
+    hashMethod = 'sha224'
     stringToBeCracked = str(input(C+' Input Hash '+R+'> '+W))
     generated_string = []
     
     while True:
         generated_string = StringGenerator(generated_string)
-        formatted_string = reverseString("".join(generated_string))
+        formatted_string = reverseString(''.join(generated_string))
         
         if generateHashFromString(hashMethod, formatted_string)  == stringToBeCracked:
-            print(C+" String "+R+">"+W+" {}".format(formatted_string))
+            print(C+' String '+R+'>'+W+' {}'.format(formatted_string))
             main()
 
 def desha256():
-    hashMethod = "sha256"
+    hashMethod = 'sha256'
     stringToBeCracked = str(input(C+' Input Hash '+R+'> '+W))
     generated_string = []
     
     while True:
         generated_string = StringGenerator(generated_string)
-        formatted_string = reverseString("".join(generated_string))
+        formatted_string = reverseString(''.join(generated_string))
         
         if generateHashFromString(hashMethod, formatted_string)  == stringToBeCracked:
-            print(C+" String "+R+">"+W+" {}".format(formatted_string))
+            print(C+' String '+R+'>'+W+' {}'.format(formatted_string))
             main()
 
 def desha384():
-    hashMethod = "sha384"
+    hashMethod = 'sha384'
     stringToBeCracked = str(input(C+' Input Hash '+R+'> '+W))
     generated_string = []
     
     while True:
         generated_string = StringGenerator(generated_string)
-        formatted_string = reverseString("".join(generated_string))
+        formatted_string = reverseString(''.join(generated_string))
         
         if generateHashFromString(hashMethod, formatted_string)  == stringToBeCracked:
-            print(C+" String "+R+">"+W+" {}".format(formatted_string))
+            print(C+' String '+R+'>'+W+' {}'.format(formatted_string))
             main()
 
 def desha512():
-    hashMethod = "sha512"
+    hashMethod = 'sha512'
     stringToBeCracked = str(input(C+' Input Hash '+R+'> '+W))
     generated_string = []
     
     while True:
         generated_string = StringGenerator(generated_string)
-        formatted_string = reverseString("".join(generated_string))
+        formatted_string = reverseString(''.join(generated_string))
         
         if generateHashFromString(hashMethod, formatted_string)  == stringToBeCracked:
-            print(C+" String "+R+">"+W+" {}".format(formatted_string))
+            print(C+' String '+R+'>'+W+' {}'.format(formatted_string))
             main()
 
 def brainly():
     bannerbr()
-    a = input(C+" Pertanyaan "+R+"> "+W)
+    a = input(C+' Pertanyaan '+R+'> '+W)
     payload = {"query":a}
     url = "https://brainly.co.id/api/28/api_tasks/suggester"
     scrap = json.loads(requests.get(url, params=payload).text)
@@ -789,26 +814,26 @@ def brainly():
        qtion = scrap['data']['tasks']['items'][0]['task']['content']
        qtion = qtion.replace("<br />","\n").replace("<span>","").replace("</span>","")
        bannerbr()
-       print (C+" ["+W+" PERTANYAAN "+C+"]\n\n"+W+" ",qtion)
+       print (C+' ['+W+' PERTANYAAN '+C+']\n\n'+W+' ',qtion)
     except:
         bannerbr()
-        print (C+" ["+W+" 404 "+C+"]"+R+" >"+W+" Soal tidak dapat ditemukan")
-        print ("")
+        print (C+' ['+W+' 404 '+C+']'+R+' >'+W+' Soal tidak dapat ditemukan')
+        print ('')
         exit()
     try:
         for x in range(100):
             ans = scrap['data']['tasks']['items'][0]['responses'][x]['content']
             ans = ans.replace("<br />","\n").replace("<span>","").replace("</span>","")
-            print ("")
-            print (C+" [ "+W+"Jawaban " + str(x+1) + C+" ]\n\n"+W + ans)
+            print ('')
+            print (C+' [ '+W+'Jawaban ' + str(x+1) + C+' ]\n\n'+W + ans)
     except:
-        print ("")
-        print (C+" [ "+W+"Hanya dapat mengambil"+C+" ]"+R+" > "+W+ str(x) +" Jawaban")
-        print ("")
+        print ('')
+        print (C+' [ '+W+'Hanya dapat mengambil'+C+' ]'+R+' > '+W+ str(x) +' Jawaban')
+        print ('')
 
 def lk21():
     bannerlk()
-    a = input(C+" Judul "+R+"> "+W)
+    a = input(C+' Judul '+R+'> '+W)
     payload = {"s":a}
     req = requests.get("https://dunia21.net/", params=payload).text
     soup = BeautifulSoup(req, "html.parser")
@@ -817,8 +842,8 @@ def lk21():
     judul = re.search(r'<a href="https://dunia21.net/(.*)/" rel="bookmark"', str(link)).group(1)
     try:
         bannerlk_dl()
-        print (C+" ["+W+" JUDUL "+C+"]"+R+" >"+W+" ",str(judul))
-        print ("")
+        print (C+' ['+W+' JUDUL '+C+']'+R+' >'+W+' ',str(judul))
+        print ('')
         dload = "https://dl.layarkaca21.vip/get/" + judul
         bpass = "https://dl.layarkaca21.vip/verifying.php"
         data = {"Content-Type":"application/x-www-form-urlencoded; charset=UTF-8",
@@ -831,25 +856,25 @@ def lk21():
         p360 = re.findall(r'btn-360" href="(.*)" rel=', str(linkdownload))
         if len(p360) > 0:
             for laz1 in p360:
-                print(C+" ["+W+" 360 P "+C+"]"+R+" >"+W+" ",laz1)
+                print(C+' ['+W+' 360 P '+C+']'+R+' >'+W+' ',laz1)
         p480 = re.findall(r'btn-480" href="(.*)" rel=', str(linkdownload))
         if len(p480) > 0:
             for laz2 in p480:
-                print(C+" ["+W+" 480 P "+C+"]"+R+" >"+W+" ",laz2)
+                print(C+' ['+W+' 480 P '+C+']'+R+' >'+W+' ',laz2)
         p720 = re.findall(r'btn-720" href="(.*)" rel=', str(linkdownload))
         if len(p720) > 0:
             for laz3 in p720:
-                print(C+" ["+W+" 720 P "+C+"]"+R+" >"+W+" ",laz3)
+                print(C+' ['+W+' 720 P '+C+']'+R+' >'+W+' ',laz3)
         p1080 = re.findall(r'btn-1080" href="(.*)" rel=', str(linkdownload))
         if len(p1080) > 0:
             for laz4 in p1080:
-                print(C+" ["+W+" 1080P "+C+"]"+R+" >"+W+" ",laz4)
+                print(C+' ['+W+' 1080P '+C+']'+R+' >'+W+' ',laz4)
     except:
-        print (C+" ["+W+" 404 "+C+"]"+R+" >"+W+" Film tidak ditemukan")
-    print ("")
+        print (C+' ['+W+' 404 '+C+']'+R+' >'+W+' Film tidak ditemukan')
+    print ('')
 
 def hma() :
-    total = int(input(C+" Total "+R+"> "+W))
+    total = int(input(C+' Total '+R+'> '+W))
     def rand(chars=string.ascii_uppercase + string.digits):
         return ''.join(random.choice(chars) for _ in range(6))
     for i in range(total):
@@ -858,11 +883,11 @@ def hma() :
 
 
 def generate() :
-    pil = str(input(C+" Input Base (y/n) ? "+R+"> "+W))
+    pil = str(input(C+' Input Base (y/n) ? '+R+'> '+W))
     if pil == 'n' or pil == 'N' :
-        size = int(input(C+" Jumlah digit kode "+R+"> "+W))
-        case = str(input(C+" UPPER/lower (U/l) ? "+R+"> "+W))
-        total = int(input(C+" Total kode "+R+"> "+W))
+        size = int(input(C+' Jumlah digit kode '+R+'> '+W))
+        case = str(input(C+' UPPER/lower (U/l) ? '+R+'> '+W))
+        total = int(input(C+' Total kode '+R+'> '+W))
         if case == 'u' or case == 'U' :
             def rand(chars=string.ascii_uppercase + string.digits):
                 return ''.join(random.choice(chars) for _ in range(size))
@@ -875,9 +900,9 @@ def generate() :
                 print (' '+rand())
     elif pil == 'y' or pil == 'Y' :
         base = str(input(C+' Base '+R+'> '+W))
-        size = int(input(C+" Jumlah digit kode "+R+"> "+W))
-        case = str(input(C+" UPPER/lower (U/l) ? "+R+"> "+W))
-        total = int(input(C+" Total kode "+R+"> "+W))
+        size = int(input(C+' Jumlah digit kode '+R+'> '+W))
+        case = str(input(C+' UPPER/lower (U/l) ? '+R+'> '+W))
+        total = int(input(C+' Total kode '+R+'> '+W))
         if case == 'u' or case == 'U' :
             def rand(chars=string.ascii_uppercase + string.digits):
                 return ''.join(random.choice(chars) for _ in range(size-len(base)))
@@ -888,6 +913,143 @@ def generate() :
                 return ''.join(random.choice(chars) for _ in range(size-len(base)))
             for i in range(total):
                 print (' '+base+rand())
+
+def apkpure():
+      global link,nm,linkfile,size
+      no =0
+      link =[]
+      judul=[]
+      developer=[]
+      bannerapk()
+      print ('')
+      sc = input(C+' Aplikasi '+R+'> '+W)
+      print ('')
+      bannerapk()
+      req = Request('https://m.apkpure.com/id/search?q='+sc.replace(' ','+'), headers={'User-Agent':'Dalvik/2.1.0 (Linux; U; Android 7.1.2; Redmi Note 5A MIUI/V9.6.2.0.NDFMIFD'})
+      req = urlopen(req).read()
+      sup = BeautifulSoup(req,'html.parser')
+      for li in sup.find_all('a',attrs={'class':'dd'}):
+            l = li.get('href')
+            link.append(l)
+      for i in sup.find_all('div',attrs={'class':'r'}):
+            title = i.find('p',attrs={'class':'p1'})
+            peng = i.find('p',attrs={'class':'p2'})
+            judul.append(title.get_text())
+            developer.append(peng.get_text())
+      for ju,de in zip(judul,developer):
+            no+=1 
+            print ('')
+            print (C+' ['+W, no ,C+']')
+            print(C+' ['+W+' Nama Aplikasi '+C+']'+R+' >'+W+' '+ju)
+            print(C+' ['+W+' Developer '+C+']'+R+' >'+W+' '+de)
+            print ('')
+
+      print(C+' ['+W+' Aplikasi ditemukan '+C+']'+R+' >'+W+' '+str(len(link)))
+      print ('')
+      do = int(input(C+' Input Nomor '+R+'> '+W))
+      do = do - 1    
+      nm = input(C+' Output '+R+'> '+W)
+      print ('')
+      print(C+' ['+W+' Output '+C+']'+R+' >'+W+' '+nm+'.apk')
+      linx='https://m.apkpure.com'+str(link[do])+'/download?from=details'
+      r = Request(linx,headers={'User-Agent':'Dalvik/2.1.0 (Linux; U; Android 7.1.2; Redmi Note 5A MIUI/V9.6.2.0.NDFMIFD'})
+      r = urlopen(r).read()
+      sp = BeautifulSoup(r,'html.parser')
+      donl = sp.find('div',attrs={'class':'fast-download-box'})
+      don = donl.find('a',attrs={'class':'ga'})
+      size = donl.find('span',attrs={'class':'fsize'})
+      linkfile = don.get('href')
+      trd = threading.Thread(name='Donloder',target=donlot)
+      trd.start()
+      bannerapk()
+      while trd.isAlive():
+          animasi()
+
+def apkdl():
+      global link1,nm,linkfile,size
+      no =0
+      link1 =[]
+      judul1=[]
+      developer1=[]
+      bannerapk()
+      print ('')
+      sc = input(C+' Aplikasi '+R+'> '+W)
+      print ('')
+      bannerapk()
+      req = Request('https://apk-dl.com/search?q='+sc.replace(' ','%20'), headers={'User-Agent':'Dalvik/2.1.0 (Linux; U; Android 7.1.2; Redmi Note 5A MIUI/V9.6.2.0.NDFMIFD'})
+      req = urlopen(req).read()
+      sup = BeautifulSoup(req,'html.parser')
+      for div in sup.find_all('div',class_='card no-rationale square-cover apps small'):
+            di = div.find('div', class_='details')
+            des = di.find('a', class_='title')
+            link1.append(des.get('href'))
+            judul1.append(des.text)
+            dev = di.find('div',class_='subtitle-container')
+            dev = dev.find('a')
+            developer1.append(dev.text)
+      for ju,de in zip(judul1,developer1):
+            no+=1 
+            print ('')
+            print (C+' ['+W, no ,C+']')
+            print(C+' ['+W+' Nama Aplikasi '+C+']'+R+' >'+W+' '+ju)
+            print(C+' ['+W+' Developer '+C+']'+R+' >'+W+' '+de)
+            print ('')
+      print(C+' ['+W+' Aplikasi ditemukan '+C+']'+R+' >'+W+' '+str(len(link)))
+      print ('')
+      do = int(input(C+' Input Nomor '+R+'> '+W))
+      do = do - 1    
+      nm = input(C+' Output '+R+'> '+W)
+      print ('')
+      print(C+' ['+W+' Output '+C+']'+R+' >'+W+' '+nm+'.apk')
+      linx='https://apk-dl.com/'+str(link1[do])
+      r = Request(linx,headers={'User-Agent':'Dalvik/2.1.0 (Linux; U; Android 7.1.2; Redmi Note 5A MIUI/V9.6.2.0.NDFMIFD'})
+      r = urlopen(r).read()
+      sp = BeautifulSoup(r,'html.parser')
+      donl = sp.find('div',class_='download-btn')
+      donll = donl.find('a')
+      lindonl = donll.get('href')
+      rq = Request('http://apkfind.com'+lindonl,headers={'User-Agent':'Dalvik/2.1.0 (Linux; U; Android 7.1.2; Redmi Note 5A MIUI/V9.6.2.0.NDFMIFD'})
+      rq = urlopen(rq).read()
+      spq = BeautifulSoup(rq,'html.parser')
+      downn =spq.find('div',class_='container-content')
+      donn = downn.find('a')#, class_='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect fixed-size')
+      rj = Request(donn.get('href'),headers={'User-Agent':'Dalvik/2.1.0 (Linux; U; Android 7.1.2; Redmi Note 5A MIUI/V9.6.2.0.NDFMIFD'})
+      rj = urlopen(rj).read()
+      spr = BeautifulSoup(rj,'html.parser')
+      downnn =spr.find('div',class_='container-content')
+      donnn = downnn.find('a')#, class_='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect fixed-size')
+      linkfile='http:'+donnn.get('href')
+      trd = threading.Thread(name='Donloder',target=donlot)
+      trd.start()
+      bannerapk()
+      while trd.isAlive():
+          animasi()
+
+def donlot():
+      try:
+            os.mkdir('Hasil')
+      except OSError:
+            pass
+      req = requests.get(linkfile, headers={'User-Agent':'Dalvik/2.1.0 (Linux; U; Android 7.1.2; Redmi Note 5A MIUI/V9.6.2.0.NDFMIFD'})
+      with open('Hasil/'+nm+'.apk','wb') as dl:
+            dl.write(req.content)
+
+def animasi():
+      zz = ['     ',' >   ',' >>  ',' >>> ']
+      for i in zz:
+          xx = ['/','-','\\','|']
+          for o in xx:
+              print (C+'\r [ '+R+o+C+' ] '+W+'Downloading'+C+' [ '+O+i+C+' ] '+W+nm+'.apk',end=''),;sys.stdout.flush();time.sleep(0.1)
+
+def apk():
+    bannerapk()
+    apkmenu()
+
+def apkmenu():
+    print ('')
+    print (C+' apkpure'+R+'   :'+W+' Download APK from APKpure.com')
+    print (C+' apkdl'+R+'     :'+W+' Download APK from Apk-dl.com')
+    print ('')
 
 def betaprogram():
     print ('')
@@ -930,6 +1092,7 @@ def menu():
     print (C+' crypt'+R+'     :'+W+' Crypto Tool')
     print (C+' 0brain'+R+'    :'+W+' Brainly Seeker')
     print (C+' lkx21'+R+'     :'+W+' LK21 Bypass Shortlink')
+    print (C+' apk'+R+'       :'+W+' APK Downloader')
     print (C+' gen'+R+'       :'+W+' Generator')
     print ('')
     print (C+' help'+R+'      :'+W+' Help')
@@ -961,8 +1124,8 @@ def main():
         exit()
     elif cmd == 'quit' or cmd == '-q' :
         print ('')
-        print (O+" Command "+cmd+" Not Found")
-        print (W+" Type ( "+C+"exit"+W+" ) to Exit Program")
+        print (O+' Command '+cmd+' Not Found')
+        print (W+' Type ( '+C+'exit'+W+' ) to Exit Program')
         main()
     elif cmd == 'math' :
         mathtool()
@@ -981,6 +1144,17 @@ def main():
         main()
     elif cmd == 'lkx21' :
         lk21()
+        main()
+    elif cmd == 'apk' :
+        apk()
+        main()
+    elif cmd == 'apkpure' :
+        apkpure()
+        print ('')
+        main()
+    elif cmd == 'apkdl' :
+        apkdl()
+        print ('')
         main()
     elif cmd == 'custgen' :
         generate()
@@ -1185,8 +1359,8 @@ def main():
         desha512()
     else :
         print ('')
-        print (O+" Command "+cmd+" Not Found")
-        print (W+" Type ( "+C+"help"+W+" ) to Show Help")
+        print (O+' Command '+cmd+' Not Found')
+        print (W+' Type ( '+C+'help'+W+' ) to Show Help')
         main()
 banner()
 main()
