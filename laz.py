@@ -41,7 +41,7 @@ def bannerbr():
     print ('    |   |  |    ')
     print ('    |   | /     ')
     print ('    |===|/      ')
-    print ('    '---'       ')
+    print ('    \'---\'       ')
     print ('')
 
 def bannerlk():
