@@ -6,7 +6,6 @@ from urllib.request import Request, urlopen
 from bs4 import BeautifulSoup
 from string import *
 
-
 W  = '\033[0m'  # white (default)
 R  = '\033[1;31m' # red
 G  = '\033[1;32m' # green bold
@@ -23,7 +22,7 @@ def banner():
     print (O+' / `.`. ,-\'         `-/ /   ) '+W+'  ________| '+C+'hEllO, L4zy pe0ple!!'+W+' |')
     print (O+'(    `,\'             _ \   ;  '+W+' /        |______________________|')
     print (O+' \  _( _           ,\'  )/  : '+W+'_/                                 ')
-    print (O+'  \ `-( `-.      ,\'    /  /                            '+G+' v.5.5  ')
+    print (O+'  \ `-( `-.      ,\'    /  /                            '+G+' v.5.7  ')
     print (O+'   \   \ __`.___/_,-( /_,\' '+R+'_    ____ ___  _  _ ____ _  _ _ ____ ')
     print (O+'    `--\'`,\_o,(_)o_,\',     '+R+'|    |__|   /  |\/| |__| |\ | | |__| ')
     print (O+'        (    /`-\'\    )    '+R+'|___ |  |  /__ |  | |  | | \| | |  | ')
@@ -114,128 +113,6 @@ def bannerapk():
     print (R+'           '+C+'    \':`    '+W)
     print ('')
 
-def readme():
-    os.system('clear')
-    print ('')
-    print (R+'       __   __ ')
-    print (R+'      /  \./  \/\_ ')
-    print (R+'   __{^\_ _}_   )  }'+G+'/^\  '+O+'  Lazy.Frmwrk '+C+'Project      ')
-    print (R+'  /  /\_/^\._}_/  /'+G+'/  / ')
-    print (R+' (  (__{(@)}\__}./'+G+'/_/__A____A_____A________A_____A___')
-    print (R+'  \__/{/(_)\_}  )\\'+G+'\\ \\\---v-----V-----V-v----Y----v----')
-    print (R+'   (   (__)_)_/  )\ '+G+'\> ')
-    print (R+'    \__/     \__/\/'+G+'\/  '+W+'          Readme Doc. ')
-    print (R+'       \__,--\' ')
-    print ('')
-    print (C+' ════════════════════'+W+' Change logs'+C+' ════════════════════'+W)
-    print ('')
-    print (O+' ~ Ver.1.0'+W)
-    print ('  - First version of this framework, including ')
-    print ('    Math Tools, 0-Brain, and LKx21')
-    print ('')
-    print (O+' ~ Ver.1.5'+W)
-    print ('  - Adding Custom Code Generator for extrap')
-    print ()
-    print (O+' ~ Ver.2.0'+W)
-    print ('  - Fixing some bugs and adding Help and About menu')
-    print ('')
-    print (O+' ~ Ver.2.5'+W)
-    print ('  - Interface update and Fixing some bugs on ')
-    print ('    Math tools')
-    print ('')
-    print (O+' ~ Ver.3.0'+W)
-    print ('  - This framework now using commands to run ')
-    print ('    several tools on it, command that can be used ')
-    print ('    included at Help menu')
-    print ('')
-    print (O+' ~ Ver.4.0'+W)
-    print ('  - Fixing a little bug on Custom Code Generator')
-    print ('')
-    print (O+' ~ Ver.4.5'+W)
-    print ('  - Adding Physics tools and Interface update')
-    print ('')
-    print (O+' ~ Ver.5.beta'+W)
-    print ('  - Sorry but Physics tools have many invalid ')
-    print ('    operation, now it has been deleted. ')
-    print ('    Decrypt tools added')
-    print ('')
-    print (O+' ~ Ver.5.0'+W)
-    print ('  - Adding some Generator, Checker are comingsoon')
-    print ('')
-    print (O+' ~ Ver.5.5'+W)
-    print ('  - Adding APK Downloader')
-    print ('')
-
-def about():
-    os.system('clear')
-    print ('')
-    print (R+'       __   __ ')
-    print (R+'      /  \./  \/\_ ')
-    print (R+'   __{^\_ _}_   )  }'+G+'/^\  '+O+'  Lazy.Frmwrk '+C+'Project      ')
-    print (R+'  /  /\_/^\._}_/  /'+G+'/  / ')
-    print (R+' (  (__{(@)}\__}./'+G+'/_/__A____A_____A________A_____A___')
-    print (R+'  \__/{/(_)\_}  )\\'+G+'\\ \\\---v-----V-----V-v----Y----v----')
-    print (R+'   (   (__)_)_/  )\ '+G+'\> ')
-    print (R+'    \__/     \__/\/'+G+'\/  '+W+'    About Me and My Tool')
-    print (R+'       \__,--\' ')
-    print ('')
-    print (C+' Name       '+R+':'+W+' Rakka Pratama Putra')
-    print (C+' Birth      '+R+':'+W+' 16 August 2003')
-    print (C+' Country    '+R+':'+W+' ID')
-    print (C+' Fav. Color '+R+':'+W+' White')
-    print ('')
-    print (C+' ═══════════════════════'+W+' About'+C+' ═══════════════════════'+W)
-    print ('')
-    print (' I made this framework initially just for fun')
-    print (' but finally I developed this framework by adding')
-    print (' some tools for lazy society out there.')
-    print (' Maybe now I can only add a few tools in this framework,')
-    print (' and I will continue to update them')
-    print ('')
-
-def help():
-    os.system('clear')
-    print ('')
-    print (R+'       __   __ ')
-    print (R+'      /  \./  \/\_ ')
-    print (R+'   __{^\_ _}_   )  }'+G+'/^\  '+O+'  Lazy.Frmwrk '+C+'Project      ')
-    print (R+'  /  /\_/^\._}_/  /'+G+'/  / ')
-    print (R+' (  (__{(@)}\__}./'+G+'/_/__A____A_____A________A_____A___')
-    print (R+'  \__/{/(_)\_}  )\\'+G+'\\ \\\---v-----V-----V-v----Y----v----')
-    print (R+'   (   (__)_)_/  )\ '+G+'\> ')
-    print (R+'    \__/     \__/\/'+G+'\/  '+W+'          How To Use')
-    print (R+'       \__,--\' ')
-    print ('')
-    print (W+' This framework uses the command to run several tools in it')
-    print ('')
-    print (W+' Commands that can be used, including :')
-    menu()
-    brute()
-    fbmenu()
-    mathtool()
-    pilbangundatar()
-    pilbangunruang()
-    phytool()
-    crypto()
-    apkmenu()
-    glurus()
-    glurusbc()
-    glurusbl()
-    medus()
-    persegi()
-    persegipanjang()
-    layang()
-    ketupat()
-    trapesium()
-    jajargenjang()
-    segitiga()
-    lingkaran()
-    bola()
-    balok()
-    kubik()
-    limas()
-    main()
-
 ua = [
    #Chrome
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
@@ -310,153 +187,6 @@ prox = [
     'http://210.213.226.3:8080',
     'http://202.70.80.233:8080',
 ]
-
-def glurus():
-    print ('')
-    print (C+' ljrr'+R+'      :'+W+' Laju Rata Rata')
-    print (C+' kcrr'+R+'      :'+W+' Kecepatan Rata Rata')
-    print (C+' kcs'+R+'       :'+W+' Kecepatan Sesaat')
-    print (C+' plj'+R+'       :'+W+' Perlajuan')
-    print (C+' pcrr'+R+'      :'+W+' Percepatan Rata Rata')
-    print (C+' pcs'+R+'       :'+W+' Percepatan Sesaat')
-    print (C+' glb'+R+'       :'+W+' Gerak Lurus Beraturan')
-    print (C+' glbb'+R+'      :'+W+' Gerak Lurus Berubah Beraturan')
-    print (C+' glbc'+R+'      :'+W+' Gerak Lurus Berubah Dipercepat')
-    print (C+' glbl'+R+'      :'+W+' Gerak Lurus Berubah Diperlambat')
-    print (C+' gvb'+R+'       :'+W+' Gerak Vertikal Ke Bawah')
-    print (C+' gva'+R+'       :'+W+' Gerak Vertikal Ke Atas')
-    print ('')
-
-def lajurata():
-    s = float(input(C+' Jarak '+R+'> '+W))
-    t = float(input(C+' Waktu '+R+'> '+W))
-    v = s/t
-    print ('')
-    print (C+' Laju Rata Rata '+R+'>'+W, v ,C+'m/s'+W)
-
-def kcepatrata():
-    x = float(input(C+' Perpindahan '+R+'> '+W))
-    t = float(input(C+' Waktu '+R+'> '+W))
-    v = x/t
-    print ('')
-    print (C+' Kecepatan Rata Rata '+R+'>'+W, v ,W)
-
-def kcepats():
-    x = float(input(C+' Perpindahan '+R+'> '+W))
-    t = float(input(C+' Waktu '+R+'> '+W))
-    v = x/t
-    print ('')
-    print (C+' Laju Rata Rata '+R+'>'+W, v ,W)
-
-def plajuan():
-    v = float(input(C+' Kecepatan '+R+'> '+W))
-    t = float(input(C+' Waktu '+R+'> '+W))
-    a = v/t
-    print ('')
-    print (C+' Perlajuan '+R+'>'+W, a ,C+'m/s2'+W)
-
-def pcepatrata():
-    v = float(input(C+' Kecepatan '+R+'> '+W))
-    t = float(input(C+' Waktu '+R+'> '+W))
-    a = v/t
-    print ('')
-    print (C+' Percepatan Rata Rata '+R+'>'+W, a ,W)
-
-def pcepats():
-    v = float(input(C+' Kecepatan '+R+'> '+W))
-    t = float(input(C+' Waktu '+R+'> '+W))
-    a = v/t
-    print ('')
-    print (C+' Laju Rata Rata '+R+'>'+W, a ,C+'m/s'+W)
-
-def glurusb():
-    s = float(input(C+' Jarak '+R+'> '+W))
-    t = float(input(C+' Waktu '+R+'> '+W))
-    v = s/t
-    print ('')
-    print (C+' Gerak Lurus Beraturan '+R+'>'+W, v ,W)
-
-def glurusbb():
-    v = float(input(C+' Jarak '+R+'> '+W))
-    t = float(input(C+' Waktu '+R+'> '+W))
-    a = v/t
-    print ('')
-    print (C+' Gerak Lurus Berubah Beraturan '+R+'>'+W, v ,W)
-
-def glurusbcvt():
-    v0 = float(input(C+' Kecepatan Awal '+R+'> '+W))
-    t = float(input(C+' Waktu '+R+'> '+W))
-    a = float(input(C+' Percepatan '+R+'> '+W))
-    vt = v0+a*t
-    s = v0*t+(a*t)*(a*t)*1/2
-    print ('')
-    print (C+' Kecepatan Akhir '+R+'>'+W, vt ,C+'m/s'+W)
-    print (C+' Jarak Yang Ditempuh '+R+'>'+W, s ,C+'m'+W)
-
-def glurusbca():
-    v0 = float(input(C+' Kecepatan Awal '+R+'> '+W))
-    t = float(input(C+' Waktu '+R+'> '+W))
-    vt = float(input(C+' Kecepatan Akhir '+R+'> '+W))
-    a = (vt-v0)/t
-    s = v0*t+(a*t)*(a*t)*1/2
-    print ('')
-    print (C+' Percepatan '+R+'>'+W, a ,C+'m/s2'+W)
-    print (C+' Jarak Yang Ditempuh '+R+'>'+W, s ,C+'m'+W)
-
-def gverta():
-    g = 10
-    v0 = float(input(C+' Kecepatan Awal '+R+'> '+W))
-    tm = float(input(C+' Waktu Di Titik Tertinggi '+R+'> '+W))
-    h = v0**2/(2*g)
-    t = 2*tm
-    vt = v0-g*t
-    vt2 = v0**2-2*g*h
-    print (C+' Tinggi Maksimum '+R+'>'+W, h ,C+'m/s'+W)
-    print (C+' Waktu Ketika Benda Di Tanah '+R+'>'+W, t ,C+'m/s'+W)
-    print (C+' Kecepatan '+R+'>'+W, vt ,C+'m/s'+W)
-    print (C+' Kecepatan (vt2) '+R+'>'+W, vt2 ,C+'m/s2'+W)
-
-def gvertb():
-    g = 10
-    h = float(input(C+' Ketinggian '+R+'> '+W))
-    v0 = float(input(C+' Kecepatan Awal '+R+'> '+W))
-    t = float(input(C+' Waktu '+R+'> '+W))
-    vt = v0+g*t
-    vt2 = v0**2+2*g*h
-    print (C+' Kecepatan '+R+'>'+W, vt ,C+'m/s'+W)
-    print (C+' Kecepatan (vt2) '+R+'>'+W, vt2 ,C+'m/s2'+W)
-
-def glurusbc():
-    print ('')
-    print (C+' glbcka'+R+'    :'+W+' Kecepatan Akhir')
-    print (C+' glbcpc'+R+'    :'+W+' Percepatan')
-    print ('')
-
-def glurusbl():
-    print ('')
-    print (C+' glblka'+R+'    :'+W+' Kecepatan Akhir')
-    print (C+' glblpc'+R+'    :'+W+' Percepatan')
-    print ('')
-
-def glurusblvt():
-    v0 = float(input(C+' Kecepatan Awal '+R+'> '+W))
-    t = float(input(C+' Waktu '+R+'> '+W))
-    a = float(input(C+' Percepatan '+R+'> '+W))
-    vt = v0-a*t
-    s = v0*t-1/2*(a*t)**2
-    print ('')
-    print (C+' Kecepatan Akhir '+R+'>'+W, vt ,C+'m/s'+W)
-    print (C+' Jarak Yang Ditempuh '+R+'>'+W, s ,C+'m'+W)
-
-def glurusbla():
-    v0 = float(input(C+' Kecepatan Awal '+R+'> '+W))
-    t = float(input(C+' Waktu '+R+'> '+W))
-    vt = float(input(C+' Kecepatan Akhir '+R+'> '+W))
-    a = (vt-v0)/t
-    s = v0*t-1/2*(a*t)**2
-    print ('')
-    print (C+' Percepatan '+R+'>'+W, a ,C+'m/s2'+W)
-    print (C+' Jarak Yang Ditempuh '+R+'>'+W, s ,C+'m'+W)
 
 def prima():
     num = int(input(C+' Masukkan Bilangan '+R+'> '+W))
@@ -679,102 +409,399 @@ def luas_layang () :
 	
 def medus() :      
     print ('')
-    print (C+' mean'+R+'      :'+W+' Mean')
-    print (C+' med'+R+'       :'+W+' Median')
-    print (C+' mod'+R+'       :'+W+' Modus')
+    print (C+' 01'+R+'  :'+W+'  Mean')
+    print (C+' 02'+R+'  :'+W+'  Median')
+    print (C+' 03'+R+'  :'+W+'  Modus')
     print ('')
+    print (C+' 00'+R+'  :'+W+'  Back')
+    print (C+' 99'+R+'  :'+W+'  Exit')
+    print ('')
+    cmd = str(input(W+' Menu/Math/3M'+R+' > '+W))
+    if cmd == '01' or cmd == '1' :
+        banner()
+        mean()
+    elif cmd == '02' or cmd == '2' :
+        banner()
+        median()
+    elif cmd == '03' or cmd == '3' :
+        banner()
+        modus()
+    elif cmd == '00' or cmd == '0' :
+        banner()
+        mathtool()
+    elif cmd == '99' :
+        exit()
+    else :
+        banner()
+        medus()
 
 def persegi():
     print ('')
-    print (C+' kp'+R+'        :'+W+' Keliling Persegi')
-    print (C+' lp'+R+'        :'+W+' Luas Persegi')
+    print (C+' 01'+R+'  :'+W+'  Keliling Persegi')
+    print (C+' 02'+R+'  :'+W+'  Luas Persegi')
     print ('')
+    print (C+' 00'+R+'  :'+W+'  Back')
+    print (C+' 99'+R+'  :'+W+'  Exit')
+    print ('')
+    cmd = str(input(W+' Menu/Math/Datar/Persegi'+R+' > '+W))
+    if cmd == '01' or cmd == '1' :
+        banner()
+        keliling_persegi()
+    elif cmd == '02' or cmd == '2' :
+        banner()
+        luas_persegi()
+    elif cmd == '00' or cmd == '0' :
+        banner()
+        pilbangundatar()
+    elif cmd == '99' :
+        exit()
+    else :
+        banner()
+        persegi()
 
 def persegipanjang():
     print ('')
-    print (C+' kpp'+R+'       :'+W+' Keliling Persegi Panjang')
-    print (C+' lpp'+R+'       :'+W+' Luas Persegi Panjang')
+    print (C+' 01'+R+'  :'+W+'  Keliling Persegi Panjang')
+    print (C+' 02'+R+'  :'+W+'  Luas Persegi Panjang')
     print ('')
+    print (C+' 00'+R+'  :'+W+'  Back')
+    print (C+' 99'+R+'  :'+W+'  Exit')
+    print ('')
+    cmd = str(input(W+' Menu/Math/Datar/Persegipanjang'+R+' > '+W))
+    if cmd == '01' or cmd == '1' :
+        banner()
+        keliling_persegipanjang()
+    elif cmd == '02' or cmd == '2' :
+        banner()
+        luas_persegipanjang()
+    elif cmd == '00' or cmd == '0' :
+        banner()
+        pilbangundatar()
+    elif cmd == '99' :
+        exit()
+    else :
+        banner()
+        persegipanjang()
 
 def layang():
     print ('')
-    print (C+' kll'+R+'       :'+W+' Keliling Layang Layang')
-    print (C+' lll'+R+'       :'+W+' Luas Layang Layang')
+    print (C+' 01'+R+'  :'+W+'  Keliling Layang Layang')
+    print (C+' 02'+R+'  :'+W+'  Luas Layang Layang')
     print ('')
+    print (C+' 00'+R+'  :'+W+'  Back')
+    print (C+' 99'+R+'  :'+W+'  Exit')
+    print ('')
+    cmd = str(input(W+' Menu/Math/Datar/Layang'+R+' > '+W))
+    if cmd == '01' or cmd == '1' :
+        banner()
+        keliling_layang()
+    elif cmd == '02' or cmd == '2' :
+        banner()
+        luas_layang()
+    elif cmd == '00' or cmd == '0' :
+        banner()
+        pilbangundatar()
+    elif cmd == '99' :
+        exit()
+    else :
+        banner()
+        layang()
 
 def ketupat():
     print ('')
-    print (C+' kbk'+R+'       :'+W+' Keliling Belah Ketupat')
-    print (C+' lbk'+R+'       :'+W+' Luas Belah Ketupat')
+    print (C+' 01'+R+'  :'+W+'  Keliling Belah Ketupat')
+    print (C+' 02'+R+'  :'+W+'  Luas Belah Ketupat')
     print ('')
+    print (C+' 00'+R+'  :'+W+'  Back')
+    print (C+' 99'+R+'  :'+W+'  Exit')
+    print ('')
+    cmd = str(input(W+' Menu/Math/Datar/Ketupat'+R+' > '+W))
+    if cmd == '01' or cmd == '1' :
+        banner()
+        keliling_ketupat()
+    elif cmd == '02' or cmd == '2' :
+        banner()
+        luas_ketupat()
+    elif cmd == '00' or cmd == '0' :
+        banner()
+        pilbangundatar()
+    elif cmd == '99' :
+        exit()
+    else :
+        banner()
+        ketupat()
 
 def trapesium():
     print ('')
-    print (C+' kt'+R+'        :'+W+' Keliling Trapesium')
-    print (C+' lt'+R+'        :'+W+' Luas Trapesium')
+    print (C+' 01'+R+'  :'+W+'  Keliling Trapesium')
+    print (C+' 02'+R+'  :'+W+'  Luas Trapesium')
     print ('')
+    print (C+' 00'+R+'  :'+W+'  Back')
+    print (C+' 99'+R+'  :'+W+'  Exit')
+    print ('')
+    cmd = str(input(W+' Menu/Math/Datar/Trapesium'+R+' > '+W))
+    if cmd == '01' or cmd == '1' :
+        banner()
+        keliling_trapesium()
+    elif cmd == '02' or cmd == '2' :
+        banner()
+        luas_trapesium()
+    elif cmd == '00' or cmd == '0' :
+        banner()
+        pilbangundatar()
+    elif cmd == '99' :
+        exit()
+    else :
+        banner()
+        trapesium()
 
 def jajargenjang():
     print ('')
-    print (C+' kjg'+R+'       :'+W+' Keliling Jajar Genjang')
-    print (C+' ljg'+R+'       :'+W+' Luas Jajar Genjang')
+    print (C+' 01'+R+'  :'+W+'  Keliling Jajar Genjang')
+    print (C+' 02'+R+'  :'+W+'  Luas Jajar Genjang')
     print ('')
+    print (C+' 00'+R+'  :'+W+'  Back')
+    print (C+' 99'+R+'  :'+W+'  Exit')
+    print ('')
+    cmd = str(input(W+' Menu/Math/Datar/Jajargenjang'+R+' > '+W))
+    if cmd == '01' or cmd == '1' :
+        banner()
+        keliling_jajargenjang()
+    elif cmd == '02' or cmd == '2' :
+        banner()
+        luas_jajargenjang()
+    elif cmd == '00' or cmd == '0' :
+        banner()
+        pilbangundatar()
+    elif cmd == '99' :
+        exit()
+    else :
+        banner()
+        jajargenjang()
 
 def segitiga():
     print ('')
-    print (C+' kst'+R+'       :'+W+' Keliling Segitiga')
-    print (C+' lst'+R+'       :'+W+' Luas Segitiga')
+    print (C+' 01'+R+'  :'+W+'  Keliling Segitiga')
+    print (C+' 02'+R+'  :'+W+'  Luas Segitiga')
     print ('')
+    print (C+' 00'+R+'  :'+W+'  Back')
+    print (C+' 99'+R+'  :'+W+'  Exit')
+    print ('')
+    cmd = str(input(W+' Menu/Math/Datar/Segitiga'+R+' > '+W))
+    if cmd == '01' or cmd == '1' :
+        banner()
+        keliling_segitiga()
+    elif cmd == '02' or cmd == '2' :
+        banner()
+        luas_segitiga()
+    elif cmd == '00' or cmd == '0' :
+        banner()
+        pilbangundatar()
+    elif cmd == '99' :
+        exit()
+    else :
+        banner()
+        segitiga()
 
 def lingkaran():
     print ('')
-    print (C+' klk'+R+'       :'+W+' Keliling Lingkaran')
-    print (C+' llk'+R+'       :'+W+' Luas Lingkaran')
+    print (C+' 01'+R+'  :'+W+'  Keliling Lingkaran')
+    print (C+' 02'+R+'  :'+W+'  Luas Lingkaran')
     print ('')
+    print (C+' 00'+R+'  :'+W+'  Back')
+    print (C+' 99'+R+'  :'+W+'  Exit')
+    print ('')
+    cmd = str(input(W+' Menu/Math/Datar/Lingkaran'+R+' > '+W))
+    if cmd == '01' or cmd == '1' :
+        banner()
+        betaprogram()
+    elif cmd == '02' or cmd == '2' :
+        banner()
+        luas_lingkaran()
+    elif cmd == '00' or cmd == '0' :
+        banner()
+        pilbangundatar()
+    elif cmd == '99' :
+        exit()
+    else :
+        banner()
+        lingkaran()
 
 def bola():
     print ('')
-    print (C+' kbl'+R+'       :'+W+' Keliling Bola')
-    print (C+' vbl'+R+'       :'+W+' Volume Bola')
+    print (C+' 01'+R+'  :'+W+'  Keliling Bola')
+    print (C+' 02'+R+'  :'+W+'  Volume Bola')
     print ('')
+    print (C+' 00'+R+'  :'+W+'  Back')
+    print (C+' 99'+R+'  :'+W+'  Exit')
+    print ('')
+    cmd = str(input(W+' Menu/Math/Ruang/Bola'+R+' > '+W))
+    if cmd == '01' or cmd == '1' :
+        banner()
+        betaprogram()
+    elif cmd == '02' or cmd == '2' :
+        banner()
+        volume_bola()
+    elif cmd == '00' or cmd == '0' :
+        banner()
+        pilbangunruang()
+    elif cmd == '99' :
+        exit()
+    else :
+        banner()
+        bola()
 
 def balok():
     print ('')
-    print (C+' kb'+R+'        :'+W+' Keliling Balok')
-    print (C+' vb'+R+'        :'+W+' Volume Balok')
+    print (C+' 01'+R+'  :'+W+'  Keliling Balok')
+    print (C+' 02'+R+'  :'+W+'  Volume Balok')
     print ('')
+    print (C+' 00'+R+'  :'+W+'  Back')
+    print (C+' 99'+R+'  :'+W+'  Exit')
+    print ('')
+    cmd = str(input(W+' Menu/Math/Ruang/Balok'+R+' > '+W))
+    if cmd == '01' or cmd == '1' :
+        banner()
+        betaprogram()
+    elif cmd == '02' or cmd == '2' :
+        banner()
+        volume_balok()
+    elif cmd == '00' or cmd == '0' :
+        banner()
+        pilbangunruang()
+    elif cmd == '99' :
+        exit()
+    else :
+        banner()
+        balok()
 
 def kubik():
     print ('')
-    print (C+' kk'+R+'        :'+W+' Keliling Kubik')
-    print (C+' vk'+R+'        :'+W+' Volume Kubik')
+    print (C+' 01'+R+'  :'+W+'  Keliling Kubik')
+    print (C+' 02'+R+'  :'+W+'  Volume Kubik')
     print ('')
+    print (C+' 00'+R+'  :'+W+'  Back')
+    print (C+' 99'+R+'  :'+W+'  Exit')
+    print ('')
+    cmd = str(input(W+' Menu/Math/Ruang/Kubik'+R+' > '+W))
+    if cmd == '01' or cmd == '1' :
+        banner()
+        betaprogram()
+    elif cmd == '02' or cmd == '2' :
+        banner()
+        volume_kubik()
+    elif cmd == '00' or cmd == '0' :
+        banner()
+        pilbangunruang()
+    elif cmd == '99' :
+        exit()
+    else :
+        banner()
+        kubik()
 
 def limas():
     print ('')
-    print (C+' kl'+R+'        :'+W+' Keliling Limas')
-    print (C+' vl'+R+'        :'+W+' Volume Limas')
+    print (C+' 01'+R+'  :'+W+'  Keliling Limas')
+    print (C+' 02'+R+'  :'+W+'  Volume Limas')
     print ('')
+    print (C+' 00'+R+'  :'+W+'  Back')
+    print (C+' 99'+R+'  :'+W+'  Exit')
+    print ('')
+    cmd = str(input(W+' Menu/Math/Ruang/Limas'+R+' > '+W))
+    if cmd == '01' or cmd == '1' :
+        banner()
+        betaprogram()
+    elif cmd == '02' or cmd == '2' :
+        banner()
+        volume_limas()
+    elif cmd == '00' or cmd == '0' :
+        banner()
+        pilbangunruang()
+    elif cmd == '99' :
+        exit()
+    else :
+        banner()
+        limas()
 
 def pilbangundatar() :		
     print ('')
-    print (C+' bdp'+R+'       :'+W+' Persegi')
-    print (C+' bdpp'+R+'      :'+W+' Persegi Panjang')
-    print (C+' bdst'+R+'      :'+W+' Segitiga')
-    print (C+' bdlk'+R+'      :'+W+' Lingkaran')
-    print (C+' bdjg'+R+'      :'+W+' Jajar Genjang')
-    print (C+' bdt'+R+'       :'+W+' Trapesium')
-    print (C+' bdbk'+R+'      :'+W+' Belah Ketupat')
-    print (C+' bdll'+R+'      :'+W+' Layang Layang')
+    print (C+' 01'+R+'  :'+W+'  Persegi')
+    print (C+' 02'+R+'  :'+W+'  Persegi Panjang')
+    print (C+' 03'+R+'  :'+W+'  Segitiga')
+    print (C+' 04'+R+'  :'+W+'  Lingkaran')
+    print (C+' 05'+R+'  :'+W+'  Jajar Genjang')
+    print (C+' 06'+R+'  :'+W+'  Trapesium')
+    print (C+' 07'+R+'  :'+W+'  Belah Ketupat')
+    print (C+' 08'+R+'  :'+W+'  Layang Layang')
     print ('')
+    print (C+' 00'+R+'  :'+W+'  Back')
+    print (C+' 99'+R+'  :'+W+'  Exit')
+    print ('')
+    cmd = str(input(W+' Menu/Math/Datar'+R+' > '+W))
+    if cmd == '01' or cmd == '1' :
+        banner()
+        persegi()
+    elif cmd == '02' or cmd == '2' :
+        banner()
+        persegipanjang()
+    elif cmd == '03' or cmd == '3' :
+        banner()
+        segitiga()
+    elif cmd == '04' or cmd == '4' :
+        banner()
+        lingkaran()
+    elif cmd == '05' or cmd == '5' :
+        banner()
+        jajargenjang()
+    elif cmd == '06' or cmd == '6' :
+        banner()
+        trapesium()
+    elif cmd == '07' or cmd == '7' :
+        banner()
+        ketupat()
+    elif cmd == '08' or cmd == '8' :
+        banner()
+        layang()
+    elif cmd == '00' or cmd == '0' :
+        banner()
+        math()
+    elif cmd == '99' :
+        exit()
+    else :
+        banner()
+        pilbangundatar()
 
 def pilbangunruang() :      
     print ('')
-    print (C+' brk'+R+'       :'+W+' Kubik')
-    print (C+' brb'+R+'       :'+W+' Balok')
-    print (C+' brl'+R+'       :'+W+' Limas')
-    print (C+' brbl'+R+'      :'+W+' Bola')
+    print (C+' 01'+R+'  :'+W+'  Kubik')
+    print (C+' 02'+R+'  :'+W+'  Balok')
+    print (C+' 03'+R+'  :'+W+'  Limas')
+    print (C+' 04'+R+'  :'+W+'  Bola')
     print ('')
+    print (C+' 00'+R+'  :'+W+'  Back')
+    print (C+' 99'+R+'  :'+W+'  Exit')
+    print ('')
+    cmd = str(input(W+' Menu/Math/Ruang'+R+' > '+W))
+    if cmd == '01' or cmd == '1' :
+        banner()
+        kubik()
+    elif cmd == '02' or cmd == '2' :
+        banner()
+        balok()
+    elif cmd == '03' or cmd == '3' :
+        banner()
+        limas()
+    elif cmd == '04' or cmd == '4' :
+        banner()
+        bola()
+    elif cmd == '00' or cmd == '0' :
+        banner()
+        math()
+    elif cmd == '99' :
+        exit()
+    else :
+        banner()
+        pilbangunruang()
 
 ascii_letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
 
@@ -1200,8 +1227,8 @@ def fbbrute():
 
 def fbmenu():
     print ('')
-    print (C+' sfbbrute'+R+'        :'+W+' Brute Single Target with Wordlist')
-    print (C+' mfbbrute'+R+'        :'+W+' Brute Multiple Target with Single Password')
+    print (C+' 01'+R+'  :'+W+'  Brute Single Target with Wordlist')
+    print (C+' 02'+R+'  :'+W+'  Brute Multiple Target with Single Password')
     print ('')
 
 def apk():
@@ -1210,9 +1237,24 @@ def apk():
 
 def apkmenu():
     print ('')
-    print (C+' apkpure'+R+'   :'+W+' Download APK from APKpure.com')
-    print (C+' apkdl'+R+'     :'+W+' Download APK from Apk-dl.com')
+    print (C+' 01'+R+'  :'+W+'  Download APK from APKpure.com')
+    print (C+' 02'+R+'  :'+W+'  Download APK from Apk-dl.com')
     print ('')
+    print (C+' 00'+R+'  :'+W+'  Back')
+    print (C+' 99'+R+'  :'+W+'  Exit')
+    print ('')
+    cmd = str(input(W+' Menu/Apk'+R+' > '+W))
+    if cmd == '01' or cmd == '1' :
+        apkpure()
+    elif cmd == '02' or cmd == '2' :
+        apkdl()
+    elif cmd == '00' or cmd == '0' :
+        banner()
+        menu()
+    elif cmd == '99' :
+        exit()
+    else :
+        apk()
 
 def betaprogram():
     print ('')
@@ -1221,327 +1263,163 @@ def betaprogram():
 
 def gen():
     print ('')
-    print (C+' hma'+R+'       :'+W+' HMA License key Generator')
-    print (C+' custgen'+R+'   :'+W+' Custom Code Generator')
+    print (C+' 01'+R+'  :'+W+'  HMA License key Generator')
+    print (C+' 02'+R+'  :'+W+'  Custom Code Generator')
+    print ('')
+    print (C+' 00'+R+'  :'+W+'  Back')
+    print (C+' 99'+R+'  :'+W+'  Exit')
+    print ('')
+    cmd = str(input(W+' Menu/Generate'+R+' > '+W))
+    if cmd == '01' or cmd == '1' :
+        banner()
+        hma()
+    elif cmd == '02' or cmd == '2' :
+        banner()
+        custgen()
+    elif cmd == '00' or cmd == '0' :
+        banner()
+        menu()
+    elif cmd == '99' :
+        exit()
+    else :
+        banner()
+        gen()
 
 def crypto():
     print ('')
-    print (C+' demd5'+R+'     :'+W+' Decode MD5')
-    print (C+' desha1'+R+'    :'+W+' Decode SHA1')
-    print (C+' desha224'+R+'  :'+W+' Decode SHA224')
-    print (C+' desha256'+R+'  :'+W+' Decode SHA256')
-    print (C+' desha384'+R+'  :'+W+' Decode SHA384')
-    print (C+' desha512'+R+'  :'+W+' Decode SHA512')
+    print (C+' 01'+R+'  :'+W+'  Decode MD5')
+    print (C+' 02'+R+'  :'+W+'  Decode SHA1')
+    print (C+' 03'+R+'  :'+W+'  Decode SHA224')
+    print (C+' 04'+R+'  :'+W+'  Decode SHA256')
+    print (C+' 05'+R+'  :'+W+'  Decode SHA384')
+    print (C+' 06'+R+'  :'+W+'  Decode SHA512')
     print ('')
+    print (C+' 00'+R+'  :'+W+'  Back')
+    print (C+' 99'+R+'  :'+W+'  Exit')
+    print ('')
+    cmd = str(input(W+' Menu/Crypto'+R+' > '+W))
+    if cmd == '01' or cmd == '1' :
+        banner()
+        demd5()
+    elif cmd == '02' or cmd == '2' :
+        banner()
+        desha1()
+    elif cmd == '03' or cmd == '3' :
+        banner()
+        desha224()
+    elif cmd == '04' or cmd == '4' :
+        banner()
+        desha256()
+    elif cmd == '05' or cmd == '5' :
+        banner()
+        desha384()
+    elif cmd == '06' or cmd == '6' :
+        banner()
+        desha512()
+    elif cmd == '00' or cmd == '0' :
+        banner()
+        menu()
+    elif cmd == '99' :
+        exit()
+    else :
+        banner()
+        crypto()
 
 def brute():
     print ('')
-    print (C+' fbbrute'+R+'   :'+W+' Facebook Bruteforce')
+    print (C+' 01'+R+'  :'+W+'  Facebook Bruteforce')
     print ('')
+    print (C+' 00'+R+'  :'+W+'  Back')
+    print (C+' 99'+R+'  :'+W+'  Exit')
+    print ('')
+    cmd = str(input(W+' Menu/Brute'+R+' > '+W))
+    if cmd == '01' or cmd == '1' :
+        fbbrute()
+    elif cmd == '00' or cmd == '0' :
+        banner()
+        menu()
+    elif cmd == '99' :
+        exit()
+    else :
+        banner()
+        brute()
 
 def mathtool():
     print ('')
-    print (C+' bd'+R+'        :'+W+' Bangun Datar')
-    print (C+' br'+R+'        :'+W+' Bangun Ruang')
-    print (C+' bp'+R+'        :'+W+' Bilangan Prima')
-    print (C+' fb'+R+'        :'+W+' Faktor Bilangan')
-    print (C+' mm'+R+'        :'+W+' Mean / Median / Modus')
+    print (C+' 01'+R+'  :'+W+'  Bangun Datar')
+    print (C+' 02'+R+'  :'+W+'  Bangun Ruang')
+    print (C+' 03'+R+'  :'+W+'  Bilangan Prima')
+    print (C+' 04'+R+'  :'+W+'  Faktor Bilangan')
+    print (C+' 05'+R+'  :'+W+'  Mean / Median / Modus')
     print ('')
-
-def phytool():
+    print (C+' 00'+R+'  :'+W+'  Back')
+    print (C+' 99'+R+'  :'+W+'  Exit')
     print ('')
-    print (C+' gl'+R+'        :'+W+' Gerak Lurus')
-    print ('')
+    cmd = str(input(W+' Menu/Math'+R+' > '+W))
+    if cmd == '01' or cmd == '1' :
+        banner()
+        pilbangundatar()
+    elif cmd == '02' or cmd == '2' :
+        banner()
+        pilbangunruang()
+    elif cmd == '03' or cmd == '3' :
+        banner()
+        prima()
+    elif cmd == '04' or cmd == '4' :
+        banner()
+        faktor()
+    elif cmd == '05' or cmd == '5' :
+        banner()
+        medus()
+    elif cmd == '00' or cmd == '0' :
+        banner()
+        menu()
+    elif cmd == '99' :
+        exit()
+    else :
+        banner()
+        mathtool()
 
 def menu():
     print ('')
-    print (C+' math'+R+'      :'+W+' Math Tool')
-    print (C+' phy'+R+'       :'+W+' Physics Tool')
-    print (C+' crypt'+R+'     :'+W+' Crypto Tool')
-    print (C+' 0brain'+R+'    :'+W+' Brainly Seeker')
-    print (C+' brute'+R+'     :'+W+' Bruteforce Tool')
-    print (C+' lkx21'+R+'     :'+W+' LK21 Bypass Shortlink')
-    print (C+' apk'+R+'       :'+W+' APK Downloader')
-    print (C+' gen'+R+'       :'+W+' Generator')
+    print (C+' 01'+R+'  :'+W+'  Math Tool')
+    print (C+' 02'+R+'  :'+W+'  Physics Tool')
+    print (C+' 03'+R+'  :'+W+'  Crypto Tool')
+    print (C+' 04'+R+'  :'+W+'  Brainly Seeker')
+    print (C+' 05'+R+'  :'+W+'  Bruteforce Tool')
+    print (C+' 06'+R+'  :'+W+'  LK21 Bypass Shortlink')
+    print (C+' 07'+R+'  :'+W+'  APK Downloader')
+    print (C+' 08'+R+'  :'+W+'  Generator')
     print ('')
-    print (C+' help'+R+'      :'+W+' Help')
-    print (C+' about'+R+'     :'+W+' About')
-    print (C+' readme'+R+'    :'+W+' Readme')
-    print (C+' exit'+R+'      :'+W+' Exit')
+    print (C+' 99'+R+'  :'+W+'  Exit')
     print ('')
-
-def main():
-    print ('')
-    cmd = str(input(R+' > '+W))
-    if cmd == 'menu' or cmd == '-m' :
-        menu()
-        main()
-    elif cmd == 'about' or cmd == '-a' :
-        about()
-        main()
-    elif cmd == 'help' or cmd == '-h' :
-        help()
-        main()
-    elif cmd == 'readme' or cmd == '-r' :
-        readme()
-        main()
-    elif cmd == 'clear' or cmd == '-c' :
+    cmd = str(input(W+' Menu'+R+' > '+W))
+    if cmd == '01' or cmd == '1' :
         banner()
-        main()
-    elif cmd == 'exit' or cmd == '-e' :
-        print (R+' Exitting Now'+W)
-        exit()
-    elif cmd == 'quit' or cmd == '-q' :
-        print ('')
-        print (O+' Command '+cmd+' Not Found')
-        print (W+' Type ( '+C+'exit'+W+' ) to Exit Program')
-        main()
-    elif cmd == 'math' :
         mathtool()
-        main()
-    elif cmd == 'phy' :
+    elif cmd == '02' or cmd == '2' :
+        banner()
         betaprogram()
-        main()
-    elif cmd == 'crypt' :
+    elif cmd == '03' or cmd == '3' :
+        banner()
         crypto()
-        main()
-    elif cmd == 'gen' :
-        gen()
-        main()
-    elif cmd == '0brain' :
+    elif cmd == '04' or cmd == '4' :
         brainly()
-        main()
-    elif cmd == 'brute' :
+    elif cmd == '05' or cmd == '5' :
+        banner()
         brute()
-        main()
-    elif cmd == 'fbbrute' :
-        fbbrute()
-        main()
-    elif cmd == 'sfbbrute' :
-        sfbbrute()
-        main()
-    elif cmd == 'mfbbrute' :
-        mfbbrute()
-        main()
-    elif cmd == 'lkx21' :
-        lk21()
-        main()
-    elif cmd == 'apk' :
+    elif cmd == '06' or cmd == '6' :
+        lkx21()
+    elif cmd == '07' or cmd == '7' :
         apk()
-        main()
-    elif cmd == 'apkpure' :
-        apkpure()
-        print ('')
-        main()
-    elif cmd == 'apkdl' :
-        apkdl()
-        print ('')
-        main()
-    elif cmd == 'custgen' :
+    elif cmd == '08' or cmd == '8' :
+        banner()
         generate()
-        main()
-    elif cmd == 'hma' :
-        hma()
-        main()
-    elif cmd == 'bd' :
-        pilbangundatar()
-        main()
-    elif cmd == 'br' :
-        pilbangunruang()
-        main()
-    elif cmd == 'gl' :
-        glurus()
-        main()
-    elif cmd == 'gml' :
-        glingkar()
-        main()
-    elif cmd == 'bp' :
-        prima()
-        main()
-    elif cmd == 'fb' :
-        faktor()
-        main()
-    elif cmd == 'mm' :
-        betaprogram()
-        main()
-    elif cmd == 'bdp' :
-        persegi()
-        main()
-    elif cmd == 'bdpp' :
-        persegipanjang()
-        main()
-    elif cmd == 'bdst' :
-        segitiga()
-        main()
-    elif cmd == 'bdlk' :
-        lingkaran()
-        main()
-    elif cmd == 'bdjg' :
-        jajargenjang()
-        main()
-    elif cmd == 'bdt' :
-        trapesium()
-        main()
-    elif cmd == 'bdbk' :
-        ketupat()
-        main()
-    elif cmd == 'bdll' :
-        layang()
-        main()
-    elif cmd == 'brk' :
-        kubik()
-        main()
-    elif cmd == 'brb' :
-        balok()
-        main()
-    elif cmd == 'brl' :
-        limas()
-        main()
-    elif cmd == 'brbl' :
-        bola()
-        main()
-    elif cmd == 'mean' :
-        mean()
-        main()
-    elif cmd == 'med' :
-        median()
-        main()
-    elif cmd == 'mod' :
-        modus()
-        main()
-    elif cmd == 'kp' :
-        keliling_persegi()
-        main()
-    elif cmd == 'lp' :
-        luas_persegi()
-        main()
-    elif cmd == 'kpp' :
-        keliling_persegipanjang()
-        main()
-    elif cmd == 'lpp' :
-        luas_persegipanjang()
-        main()
-    elif cmd == 'kll' :
-        keliling_layang()
-        main()
-    elif cmd == 'lll' :
-        luas_layang()
-        main()
-    elif cmd == 'kbk' :
-        keliling_ketupat()
-        main()
-    elif cmd == 'lbk' :
-        luas_ketupat()
-        main()
-    elif cmd == 'kt' :
-        keliling_trapesium()
-        main()
-    elif cmd == 'lt' :
-        luas_trapesium()
-        main()
-    elif cmd == 'kjg' :
-        keliling_jajargenjang()
-        main()
-    elif cmd == 'ljg' :
-        luas_jajargenjang()
-        main()
-    elif cmd == 'kst' :
-        keliling_segitiga()
-        main()
-    elif cmd == 'lst' :
-        luas_segitiga()
-        main()
-    elif cmd == 'llk' :
-        luas_lingkaran()
-        main()
-    elif cmd == 'kbl' :
-        luas_bola()
-        main()
-    elif cmd == 'vbl' :
-        volume_bola()
-        main()
-    elif cmd == 'lb' :
-        luas_balok()
-        main()
-    elif cmd == 'vb' :
-        volume_balok()
-        main()
-    elif cmd == 'kk' :
-        luas_kubik()
-        main()
-    elif cmd == 'vk' :
-        volume_kubik()
-        main()
-    elif cmd == 'vl' :
-        volume_limas()
-        main()
-    elif cmd == 'glblka' :
-        glurusblvt()
-        main()
-    elif cmd == 'glblpc' :
-        glurusbla()
-        main()
-    elif cmd == 'glbl' :
-        glurusbl()
-        main()
-    elif cmd == 'ljrr' :
-        lajurata()
-        main()
-    elif cmd == 'kcrr' :
-        kcepatrata()
-        main()
-    elif cmd == 'kcs' :
-        kcepats()
-        main()
-    elif cmd == 'plj' :
-        plajuan()
-        main()
-    elif cmd == 'pcrr' :
-        pcepatrata()
-        main()
-    elif cmd == 'pcs' :
-        pcepats()
-        main()
-    elif cmd == 'glb' :
-        glurusb()
-        main()
-    elif cmd == 'glbb' :
-        glurusbb()
-        main()
-    elif cmd == 'glbc' :
-        glurusbc()
-        main()
-    elif cmd == 'glbl' :
-        glurusbl()
-        main()
-    elif cmd == 'glbcka' :
-        glurusbcvt()
-        main()
-    elif cmd == 'glbcpc' :
-        glurusbca()
-        main()
-    elif cmd == 'gvb' :
-        gvertb()
-        main()
-    elif cmd == 'gva' :
-        gverta()
-        main()
-    elif cmd == 'demd5' :
-        demd5()
-    elif cmd == 'desha1' :
-        desha1()
-    elif cmd == 'desha224' :
-        desha224()
-    elif cmd == 'desha256' :
-        desha256()
-    elif cmd == 'desha384' :
-        desha384()
-    elif cmd == 'desha512' :
-        desha512()
+    elif cmd == '99' :
+        exit()
     else :
-        print ('')
-        print (O+' Command '+cmd+' Not Found')
-        print (W+' Type ( '+C+'help'+W+' ) to Show Help')
-        main()
+        banner()
+        menu()
+
 banner()
-main()
+menu()
