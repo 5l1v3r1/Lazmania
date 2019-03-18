@@ -957,11 +957,11 @@ def lk21():
     bannerlk()
     a = input(C+' Judul '+R+'> '+W)
     payload = {"s":a}
-    req = requests.get("https://dunia21.net/", params=payload).text
+    req = requests.get("https://dunia21.me/", params=payload).text
     soup = BeautifulSoup(req, "html.parser")
     linknya = soup.find_all('h2')
     link = linknya[2]
-    judul = re.search(r'<a href="https://dunia21.net/(.*)/" rel="bookmark"', str(link)).group(1)
+    judul = re.search(r'<a href="https://dunia21.me/(.*)/" rel="bookmark"', str(link)).group(1)
     try:
         bannerlk_dl()
         print (C+' ['+W+' JUDUL '+C+']'+R+' >'+W+' ',str(judul))
@@ -1409,7 +1409,7 @@ def menu():
         banner()
         brute()
     elif cmd == '06' or cmd == '6' :
-        lkx21()
+        lk21()
     elif cmd == '07' or cmd == '7' :
         apk()
     elif cmd == '08' or cmd == '8' :
